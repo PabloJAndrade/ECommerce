@@ -1,5 +1,5 @@
 *** Settings ***
-Documentation    Suite para cadastro de conta
+Documentation    Suite de testes para My Shop
 Resource    ../base.resource
 Test Setup    Abrir Browser
 
