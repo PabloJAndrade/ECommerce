@@ -7,7 +7,7 @@ Realizar login com Sucesso
     Fill Text    ${login.inputEmail}        pablo@pablo.com.br
     Fill Text    ${login.inputPassword}     123Test@
     Click        ${login.signinButton}
-    Wait Element Should Contain Text    //h1[normalize-space(text())='My account']    My account
+    Wait Element Should Contain Text    //h1[normalize-space(text())='My account']    MY ACCOUNT
 
 
 Realizar Login Com Falha
