@@ -1,0 +1,2815 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1 (Python 3.12.3 on win32)" generated="2025-02-14T09:09:30.196065" rpa="false" schemaversion="5">
+<suite id="s1" name="Test &amp; ECommerce">
+<suite id="s1-s1" name="Test" source="C:\Users\p_cra\Documents\AmigoTech\ECommerce\test">
+<suite id="s1-s1-s1" name="testesEcommecer" source="C:\Users\p_cra\Documents\AmigoTech\ECommerce\test\testesEcommecer.robot">
+<test id="s1-s1-s1-t1" name="Cenario: Realizar login com Sucesso" line="7">
+<kw name="Abrir Browser" owner="openBrowser" type="SETUP">
+<kw name="Open Browser" owner="Browser">
+<msg time="2025-02-14T09:09:31.629947" level="WARN">Open Browser is for quick experimentation and debugging only. Use New Page for production.</msg>
+<msg time="2025-02-14T09:09:31.629947" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\Users\\p_cra\\Documents\\AmigoTech\\ECommerce\\browser\\traces\\f403baed-2910-4826-82d4-2504ae694298"}</msg>
+<msg time="2025-02-14T09:09:32.253638" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\Users\\p_cra\\Documents\\AmigoTech\\ECommerce\\browser\\traces\\f403baed-2910-4826-82d4-2504ae694298"}</msg>
+<msg time="2025-02-14T09:09:32.253638" level="INFO">{
+  "acceptDownloads": true,
+  "bypassCSP": true,
+  "forcedColors": "none",
+  "ignoreHTTPSErrors": false,
+  "javaScriptEnabled": true,
+  "offline": false,
+  "reducedMotion": "no-preference",
+  "serviceWorkers": "allow",
+  "viewport": {
+    "height": 720,
+    "width": 1280
+  }
+}</msg>
+<msg time="2025-02-14T09:09:32.290160" level="INFO">Successfully created context. </msg>
+<msg time="2025-02-14T09:09:32.290160" level="INFO">{'acceptDownloads': True, 'bypassCSP': True, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'height': 720, 'width': 1280}}</msg>
+<msg time="2025-02-14T09:09:38.144390" level="INFO">Successfully initialized new page object and opened url: http://www.automationpractice.pl/index.php</msg>
+<arg>url=http://www.automationpractice.pl/index.php</arg>
+<arg>browser=chromium</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Opens a new browser instance. Use this keyword for quick experiments or debugging sessions.</doc>
+<status status="PASS" start="2025-02-14T09:09:31.629947" elapsed="6.514443"/>
+</kw>
+<status status="PASS" start="2025-02-14T09:09:31.629947" elapsed="6.514443"/>
+</kw>
+<kw name="Realizar login com Sucesso" owner="login">
+<kw name="Wait And Click Element" owner="customKeywords">
+<kw name="Scroll To Element" owner="Browser">
+<arg>${locator}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>This method waits for actionability checks, then tries to scroll element into view,
+unless it is completely visible.</doc>
+<status status="PASS" start="2025-02-14T09:09:38.144390" elapsed="0.074904"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2025-02-14T09:09:38.224816" level="INFO">Waited for Element with selector //a[@title="Log in to your customer account" and contains(.,'Sign')] at state visible</msg>
+<arg>${locator}</arg>
+<arg>visible</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2025-02-14T09:09:38.219294" elapsed="0.005522"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-02-14T09:09:38.224816" level="INFO">Clicks the element '//a[@title="Log in to your customer account" and contains(.,'Sign')]'.</msg>
+<arg>${locator}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-02-14T09:09:38.224816" elapsed="0.716005"/>
+</kw>
+<arg>${home.sign}</arg>
+<status status="PASS" start="2025-02-14T09:09:38.144390" elapsed="0.796431"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2025-02-14T09:09:38.940821" level="INFO">Fills the text 'pablo@pablo.com.br' in the given field.</msg>
+<arg>${login.inputEmail}</arg>
+<arg>pablo@pablo.com.br</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2025-02-14T09:09:38.940821" elapsed="0.279519"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2025-02-14T09:09:39.220340" level="INFO">Fills the text '123Test@' in the given field.</msg>
+<arg>${login.inputPassword}</arg>
+<arg>123Test@</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2025-02-14T09:09:39.220340" elapsed="0.032004"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-02-14T09:09:39.252344" level="INFO">Clicks the element '//button[@id="SubmitLogin"]'.</msg>
+<arg>${login.signinButton}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-02-14T09:09:39.252344" elapsed="0.760268"/>
+</kw>
+<kw name="Wait Element Should Contain Text" owner="customKeywords">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2025-02-14T09:09:40.337949" level="INFO">Waited for Element with selector //h1[normalize-space(text())='My account'] at state visible</msg>
+<arg>${locator}</arg>
+<arg>visible</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2025-02-14T09:09:40.012612" elapsed="0.325337"/>
+</kw>
+<kw name="Get Text" owner="Browser">
+<msg time="2025-02-14T09:09:40.367482" level="INFO">Text: 'MY ACCOUNT'</msg>
+<arg>${locator}</arg>
+<arg>==</arg>
+<arg>${expectedText}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2025-02-14T09:09:40.337949" elapsed="0.029533"/>
+</kw>
+<arg>//h1[normalize-space(text())='My account']</arg>
+<arg>MY ACCOUNT</arg>
+<status status="PASS" start="2025-02-14T09:09:40.012612" elapsed="0.355877"/>
+</kw>
+<status status="PASS" start="2025-02-14T09:09:38.144390" elapsed="2.224099"/>
+</kw>
+<status status="PASS" start="2025-02-14T09:09:31.629947" elapsed="8.738542"/>
+</test>
+<test id="s1-s1-s1-t2" name="Cenario: Realizar login com Falha" line="10">
+<kw name="Abrir Browser" owner="openBrowser" type="SETUP">
+<kw name="Open Browser" owner="Browser">
+<msg time="2025-02-14T09:09:40.495785" level="WARN">Open Browser is for quick experimentation and debugging only. Use New Page for production.</msg>
+<msg time="2025-02-14T09:09:40.495785" level="INFO">Switching browser to browser=bcdf684e-eb8a-407b-badc-d401981da7c4</msg>
+<msg time="2025-02-14T09:09:40.495785" level="INFO">Successfully changed active browser: browser=bcdf684e-eb8a-407b-badc-d401981da7c4</msg>
+<msg time="2025-02-14T09:09:40.495785" level="INFO">Reusing existing browser with id: browser=bcdf684e-eb8a-407b-badc-d401981da7c4</msg>
+<msg time="2025-02-14T09:09:40.495785" level="INFO">{
+  "acceptDownloads": true,
+  "bypassCSP": true,
+  "forcedColors": "none",
+  "ignoreHTTPSErrors": false,
+  "javaScriptEnabled": true,
+  "offline": false,
+  "reducedMotion": "no-preference",
+  "serviceWorkers": "allow",
+  "viewport": {
+    "height": 720,
+    "width": 1280
+  }
+}</msg>
+<msg time="2025-02-14T09:09:40.519799" level="INFO">Successfully created context. </msg>
+<msg time="2025-02-14T09:09:40.519799" level="INFO">{'acceptDownloads': True, 'bypassCSP': True, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'height': 720, 'width': 1280}}</msg>
+<msg time="2025-02-14T09:09:46.643833" level="INFO">Successfully initialized new page object and opened url: http://www.automationpractice.pl/index.php</msg>
+<arg>url=http://www.automationpractice.pl/index.php</arg>
+<arg>browser=chromium</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Opens a new browser instance. Use this keyword for quick experiments or debugging sessions.</doc>
+<status status="PASS" start="2025-02-14T09:09:40.495785" elapsed="6.156058"/>
+</kw>
+<status status="PASS" start="2025-02-14T09:09:40.495785" elapsed="6.156058"/>
+</kw>
+<kw name="Realizar Login Com Falha" owner="login">
+<kw name="Wait And Click Element" owner="customKeywords">
+<kw name="Scroll To Element" owner="Browser">
+<arg>${locator}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>This method waits for actionability checks, then tries to scroll element into view,
+unless it is completely visible.</doc>
+<status status="PASS" start="2025-02-14T09:09:46.651843" elapsed="0.072136"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2025-02-14T09:09:46.740439" level="INFO">Waited for Element with selector //a[@title="Log in to your customer account" and contains(.,'Sign')] at state visible</msg>
+<arg>${locator}</arg>
+<arg>visible</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2025-02-14T09:09:46.731970" elapsed="0.008469"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-02-14T09:09:46.748463" level="INFO">Clicks the element '//a[@title="Log in to your customer account" and contains(.,'Sign')]'.</msg>
+<arg>${locator}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-02-14T09:09:46.740439" elapsed="0.700914"/>
+</kw>
+<arg>${home.sign}</arg>
+<status status="PASS" start="2025-02-14T09:09:46.651843" elapsed="0.789510"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2025-02-14T09:09:47.441353" level="INFO">Fills the text 'pablo@pablo.com.br' in the given field.</msg>
+<arg>${login.inputEmail}</arg>
+<arg>pablo@pablo.com.br</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2025-02-14T09:09:47.441353" elapsed="0.836979"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2025-02-14T09:09:48.284445" level="INFO">Fills the text '123Test' in the given field.</msg>
+<arg>${login.inputPassword}</arg>
+<arg>123Test</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2025-02-14T09:09:48.278332" elapsed="0.023624"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-02-14T09:09:48.301956" level="INFO">Clicks the element '//button[@id="SubmitLogin"]'.</msg>
+<arg>${login.signinButton}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-02-14T09:09:48.301956" elapsed="0.445085"/>
+</kw>
+<kw name="Wait Element Should Contain Text" owner="customKeywords">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2025-02-14T09:09:48.803322" level="INFO">Waited for Element with selector //div[@class='alert alert-danger']//li[1] at state visible</msg>
+<arg>${locator}</arg>
+<arg>visible</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2025-02-14T09:09:48.747041" elapsed="0.056281"/>
+</kw>
+<kw name="Get Text" owner="Browser">
+<msg time="2025-02-14T09:09:48.827318" level="INFO">Text: 'Authentication failed.'</msg>
+<arg>${locator}</arg>
+<arg>==</arg>
+<arg>${expectedText}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2025-02-14T09:09:48.803322" elapsed="0.023996"/>
+</kw>
+<arg>//div[@class='alert alert-danger']//li[1]</arg>
+<arg>Authentication failed.</arg>
+<status status="PASS" start="2025-02-14T09:09:48.747041" elapsed="0.080277"/>
+</kw>
+<status status="PASS" start="2025-02-14T09:09:46.651843" elapsed="2.175475"/>
+</kw>
+<status status="PASS" start="2025-02-14T09:09:40.492147" elapsed="8.335171"/>
+</test>
+<test id="s1-s1-s1-t3" name="Cenario: Realizar cadastro de Conta" line="13">
+<kw name="Abrir Browser" owner="openBrowser" type="SETUP">
+<kw name="Open Browser" owner="Browser">
+<msg time="2025-02-14T09:09:48.915834" level="WARN">Open Browser is for quick experimentation and debugging only. Use New Page for production.</msg>
+<msg time="2025-02-14T09:09:48.915834" level="INFO">Switching browser to browser=bcdf684e-eb8a-407b-badc-d401981da7c4</msg>
+<msg time="2025-02-14T09:09:48.915834" level="INFO">Successfully changed active browser: browser=bcdf684e-eb8a-407b-badc-d401981da7c4</msg>
+<msg time="2025-02-14T09:09:48.915834" level="INFO">Reusing existing browser with id: browser=bcdf684e-eb8a-407b-badc-d401981da7c4</msg>
+<msg time="2025-02-14T09:09:48.915834" level="INFO">{
+  "acceptDownloads": true,
+  "bypassCSP": true,
+  "forcedColors": "none",
+  "ignoreHTTPSErrors": false,
+  "javaScriptEnabled": true,
+  "offline": false,
+  "reducedMotion": "no-preference",
+  "serviceWorkers": "allow",
+  "viewport": {
+    "height": 720,
+    "width": 1280
+  }
+}</msg>
+<msg time="2025-02-14T09:09:48.927919" level="INFO">Successfully created context. </msg>
+<msg time="2025-02-14T09:09:48.927919" level="INFO">{'acceptDownloads': True, 'bypassCSP': True, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'height': 720, 'width': 1280}}</msg>
+<msg time="2025-02-14T09:09:56.467678" level="INFO">Successfully initialized new page object and opened url: http://www.automationpractice.pl/index.php</msg>
+<arg>url=http://www.automationpractice.pl/index.php</arg>
+<arg>browser=chromium</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Opens a new browser instance. Use this keyword for quick experiments or debugging sessions.</doc>
+<status status="PASS" start="2025-02-14T09:09:48.915834" elapsed="7.551844"/>
+</kw>
+<status status="PASS" start="2025-02-14T09:09:48.907821" elapsed="7.559857"/>
+</kw>
+<kw name="Gerar Email Aleatorio" owner="customKeywords">
+<kw name="Evaluate JavaScript" owner="Browser">
+<msg time="2025-02-14T09:09:56.523709" level="INFO">JavaScript executed successfully.</msg>
+<msg time="2025-02-14T09:09:56.523709" level="INFO">${email} = user7668@test.com</msg>
+<var>${email}</var>
+<arg>css=body</arg>
+<arg>() =&gt; { return 'user' + Math.floor(Math.random() * 10000) + '@test.com'; }</arg>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Executes given javascript on the selected element(s) or on page.</doc>
+<status status="PASS" start="2025-02-14T09:09:56.475660" elapsed="0.048049"/>
+</kw>
+<return>
+<value>${email}</value>
+<status status="PASS" start="2025-02-14T09:09:56.523709" elapsed="0.000000"/>
+</return>
+<msg time="2025-02-14T09:09:56.523709" level="INFO">${email} = user7668@test.com</msg>
+<var>${email}</var>
+<status status="PASS" start="2025-02-14T09:09:56.475660" elapsed="0.048049"/>
+</kw>
+<kw name="Realizar Sign in" owner="cadastro">
+<kw name="Wait And Click Element" owner="customKeywords">
+<kw name="Scroll To Element" owner="Browser">
+<arg>${locator}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>This method waits for actionability checks, then tries to scroll element into view,
+unless it is completely visible.</doc>
+<status status="PASS" start="2025-02-14T09:09:56.523709" elapsed="0.064435"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2025-02-14T09:09:56.596167" level="INFO">Waited for Element with selector //a[@title="Log in to your customer account" and contains(.,'Sign')] at state visible</msg>
+<arg>${locator}</arg>
+<arg>visible</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2025-02-14T09:09:56.588144" elapsed="0.008023"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-02-14T09:09:56.596167" level="INFO">Clicks the element '//a[@title="Log in to your customer account" and contains(.,'Sign')]'.</msg>
+<arg>${locator}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-02-14T09:09:56.596167" elapsed="0.683605"/>
+</kw>
+<arg>${home.sign}</arg>
+<status status="PASS" start="2025-02-14T09:09:56.523709" elapsed="0.756063"/>
+</kw>
+<kw name="Wait And Input Text" owner="customKeywords">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2025-02-14T09:09:58.125356" level="INFO">Waited for Element with selector //input[@id="email_create"] at state visible</msg>
+<arg>${locator}</arg>
+<arg>visible</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2025-02-14T09:09:57.279772" elapsed="0.845584"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2025-02-14T09:09:58.125356" level="INFO">Fills the text 'user7668@test.com' in the given field.</msg>
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2025-02-14T09:09:58.125356" elapsed="0.016032"/>
+</kw>
+<arg>${signin.inputEmail}</arg>
+<arg>${email}</arg>
+<status status="PASS" start="2025-02-14T09:09:57.279772" elapsed="0.861616"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-02-14T09:09:58.141388" level="INFO">Clicks the element '//button[@id="SubmitCreate"]'.</msg>
+<arg>${signin.submitEmail}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-02-14T09:09:58.141388" elapsed="0.063728"/>
+</kw>
+<arg>${email}</arg>
+<status status="PASS" start="2025-02-14T09:09:56.523709" elapsed="1.681407"/>
+</kw>
+<kw name="Criar Conta" owner="cadastro">
+<kw name="Wait And Click Element" owner="customKeywords">
+<kw name="Scroll To Element" owner="Browser">
+<arg>${locator}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>This method waits for actionability checks, then tries to scroll element into view,
+unless it is completely visible.</doc>
+<status status="PASS" start="2025-02-14T09:09:58.213200" elapsed="1.355397"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2025-02-14T09:09:59.571617" level="INFO">Waited for Element with selector //input[@id="id_gender1"] at state visible</msg>
+<arg>${locator}</arg>
+<arg>visible</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2025-02-14T09:09:59.568597" elapsed="0.003020"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-02-14T09:09:59.571617" level="INFO">Clicks the element '//input[@id="id_gender1"]'.</msg>
+<arg>${locator}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-02-14T09:09:59.571617" elapsed="0.056621"/>
+</kw>
+<arg>${cadastrarConta.titulo}</arg>
+<status status="PASS" start="2025-02-14T09:09:58.205116" elapsed="1.423122"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2025-02-14T09:09:59.628238" level="INFO">Fills the text 'Pablo' in the given field.</msg>
+<arg>${cadastrarConta.primeiroNome}</arg>
+<arg>Pablo</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2025-02-14T09:09:59.628238" elapsed="0.016002"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2025-02-14T09:09:59.644240" level="INFO">Fills the text 'Craveiro' in the given field.</msg>
+<arg>${cadastrarConta.ultimoNome}</arg>
+<arg>Craveiro</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2025-02-14T09:09:59.644240" elapsed="0.016520"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2025-02-14T09:09:59.668760" level="INFO">Fills the text '123Test@' in the given field.</msg>
+<arg>${cadastrarConta.senha}</arg>
+<arg>123Test@</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2025-02-14T09:09:59.660760" elapsed="0.016322"/>
+</kw>
+<kw name="Wait And Click Element" owner="customKeywords">
+<kw name="Scroll To Element" owner="Browser">
+<arg>${locator}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>This method waits for actionability checks, then tries to scroll element into view,
+unless it is completely visible.</doc>
+<status status="PASS" start="2025-02-14T09:09:59.677082" elapsed="0.088146"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2025-02-14T09:09:59.765228" level="INFO">Waited for Element with selector //span[normalize-space(text())='Register'] at state visible</msg>
+<arg>${locator}</arg>
+<arg>visible</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2025-02-14T09:09:59.765228" elapsed="0.000000"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-02-14T09:09:59.765228" level="INFO">Clicks the element '//span[normalize-space(text())='Register']'.</msg>
+<arg>${locator}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-02-14T09:09:59.765228" elapsed="3.153189"/>
+</kw>
+<arg>${cadastrarConta.registrar}</arg>
+<status status="PASS" start="2025-02-14T09:09:59.677082" elapsed="3.241335"/>
+</kw>
+<status status="PASS" start="2025-02-14T09:09:58.205116" elapsed="4.713301"/>
+</kw>
+<status status="PASS" start="2025-02-14T09:09:48.907821" elapsed="14.010596"/>
+</test>
+<test id="s1-s1-s1-t4" name="Cenario: Adicionar item ao carrinho" line="18">
+<kw name="Abrir Browser" owner="openBrowser" type="SETUP">
+<kw name="Open Browser" owner="Browser">
+<msg time="2025-02-14T09:10:02.982558" level="WARN">Open Browser is for quick experimentation and debugging only. Use New Page for production.</msg>
+<msg time="2025-02-14T09:10:02.990512" level="INFO">Switching browser to browser=bcdf684e-eb8a-407b-badc-d401981da7c4</msg>
+<msg time="2025-02-14T09:10:02.990512" level="INFO">Successfully changed active browser: browser=bcdf684e-eb8a-407b-badc-d401981da7c4</msg>
+<msg time="2025-02-14T09:10:02.990512" level="INFO">Reusing existing browser with id: browser=bcdf684e-eb8a-407b-badc-d401981da7c4</msg>
+<msg time="2025-02-14T09:10:02.990512" level="INFO">{
+  "acceptDownloads": true,
+  "bypassCSP": true,
+  "forcedColors": "none",
+  "ignoreHTTPSErrors": false,
+  "javaScriptEnabled": true,
+  "offline": false,
+  "reducedMotion": "no-preference",
+  "serviceWorkers": "allow",
+  "viewport": {
+    "height": 720,
+    "width": 1280
+  }
+}</msg>
+<msg time="2025-02-14T09:10:02.998515" level="INFO">Successfully created context. </msg>
+<msg time="2025-02-14T09:10:02.998515" level="INFO">{'acceptDownloads': True, 'bypassCSP': True, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'height': 720, 'width': 1280}}</msg>
+<msg time="2025-02-14T09:10:09.577519" level="INFO">Successfully initialized new page object and opened url: http://www.automationpractice.pl/index.php</msg>
+<arg>url=http://www.automationpractice.pl/index.php</arg>
+<arg>browser=chromium</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Opens a new browser instance. Use this keyword for quick experiments or debugging sessions.</doc>
+<status status="PASS" start="2025-02-14T09:10:02.982558" elapsed="6.594961"/>
+</kw>
+<status status="PASS" start="2025-02-14T09:10:02.982558" elapsed="6.594961"/>
+</kw>
+<kw name="Adicionar Item Ao carirnho" owner="checkout">
+<kw name="Mouse Move Relative To" owner="Browser">
+<msg time="2025-02-14T09:10:09.609521" level="INFO">Moving mouse relative to element center by x: 0.0, y: 0.0 coordinates.</msg>
+<arg>${home.topBar}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Moves the mouse cursor relative to the selected element.</doc>
+<status status="PASS" start="2025-02-14T09:10:09.577519" elapsed="0.048085"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-02-14T09:10:09.625604" level="INFO">Clicks the element '(//a[@title='Summer Dresses'])[2]'.</msg>
+<arg>${home.opcaoTopBar}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-02-14T09:10:09.625604" elapsed="0.891283"/>
+</kw>
+<kw name="Scroll To Element" owner="Browser">
+<arg>${pesquisa.resultados}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>This method waits for actionability checks, then tries to scroll element into view,
+unless it is completely visible.</doc>
+<status status="PASS" start="2025-02-14T09:10:10.516887" elapsed="0.881279"/>
+</kw>
+<kw name="Mouse Move Relative To" owner="Browser">
+<msg time="2025-02-14T09:10:11.416951" level="INFO">Moving mouse relative to element center by x: 0.0, y: 0.0 coordinates.</msg>
+<arg>${pesquisa.resultados}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Moves the mouse cursor relative to the selected element.</doc>
+<status status="PASS" start="2025-02-14T09:10:11.406181" elapsed="0.040401"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-02-14T09:10:11.446582" level="INFO">Clicks the element '(//div[@class='right-block']//a)[1]'.</msg>
+<arg>${pesquisa.clickResultado}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-02-14T09:10:11.446582" elapsed="0.607262"/>
+</kw>
+<kw name="Mouse Move Relative To" owner="Browser">
+<msg time="2025-02-14T09:10:12.883471" level="INFO">Moving mouse relative to element center by x: 0.0, y: 0.0 coordinates.</msg>
+<arg>${produto.cor}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Moves the mouse cursor relative to the selected element.</doc>
+<status status="PASS" start="2025-02-14T09:10:12.053844" elapsed="0.845254"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-02-14T09:10:12.907015" level="INFO">Clicks the element '(//a[@class='color_pick'])[1]'.</msg>
+<arg>${produto.cor}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-02-14T09:10:12.899098" elapsed="0.402836"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-02-14T09:10:13.309935" level="INFO">Clicks the element '//p[@id="add_to_cart"]/button[@name="Submit"]/span'.</msg>
+<arg>${produto.addCart}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-02-14T09:10:13.301934" elapsed="0.951211"/>
+</kw>
+<kw name="Wait And Click Element" owner="customKeywords">
+<kw name="Scroll To Element" owner="Browser">
+<arg>${locator}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>This method waits for actionability checks, then tries to scroll element into view,
+unless it is completely visible.</doc>
+<status status="PASS" start="2025-02-14T09:10:14.253145" elapsed="0.950747"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2025-02-14T09:10:15.207899" level="INFO">Waited for Element with selector //span[normalize-space(text())='Proceed to checkout'] at state visible</msg>
+<arg>${locator}</arg>
+<arg>visible</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2025-02-14T09:10:15.203892" elapsed="0.004007"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-02-14T09:10:15.207899" level="INFO">Clicks the element '//span[normalize-space(text())='Proceed to checkout']'.</msg>
+<arg>${locator}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-02-14T09:10:15.207899" elapsed="0.612341"/>
+</kw>
+<arg>${produto.irParaCheckout}</arg>
+<status status="PASS" start="2025-02-14T09:10:14.253145" elapsed="1.567095"/>
+</kw>
+<status status="PASS" start="2025-02-14T09:10:09.577519" elapsed="6.250727"/>
+</kw>
+<status status="PASS" start="2025-02-14T09:10:02.982558" elapsed="12.845688"/>
+</test>
+<test id="s1-s1-s1-t5" name="Cenario: Remover item do carrinho" line="21">
+<kw name="Abrir Browser" owner="openBrowser" type="SETUP">
+<kw name="Open Browser" owner="Browser">
+<msg time="2025-02-14T09:10:15.893054" level="WARN">Open Browser is for quick experimentation and debugging only. Use New Page for production.</msg>
+<msg time="2025-02-14T09:10:15.893054" level="INFO">Switching browser to browser=bcdf684e-eb8a-407b-badc-d401981da7c4</msg>
+<msg time="2025-02-14T09:10:15.901061" level="INFO">Successfully changed active browser: browser=bcdf684e-eb8a-407b-badc-d401981da7c4</msg>
+<msg time="2025-02-14T09:10:15.901061" level="INFO">Reusing existing browser with id: browser=bcdf684e-eb8a-407b-badc-d401981da7c4</msg>
+<msg time="2025-02-14T09:10:15.901061" level="INFO">{
+  "acceptDownloads": true,
+  "bypassCSP": true,
+  "forcedColors": "none",
+  "ignoreHTTPSErrors": false,
+  "javaScriptEnabled": true,
+  "offline": false,
+  "reducedMotion": "no-preference",
+  "serviceWorkers": "allow",
+  "viewport": {
+    "height": 720,
+    "width": 1280
+  }
+}</msg>
+<msg time="2025-02-14T09:10:15.909073" level="INFO">Successfully created context. </msg>
+<msg time="2025-02-14T09:10:15.909073" level="INFO">{'acceptDownloads': True, 'bypassCSP': True, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'height': 720, 'width': 1280}}</msg>
+<msg time="2025-02-14T09:10:22.586231" level="INFO">Successfully initialized new page object and opened url: http://www.automationpractice.pl/index.php</msg>
+<arg>url=http://www.automationpractice.pl/index.php</arg>
+<arg>browser=chromium</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Opens a new browser instance. Use this keyword for quick experiments or debugging sessions.</doc>
+<status status="PASS" start="2025-02-14T09:10:15.893054" elapsed="6.693177"/>
+</kw>
+<status status="PASS" start="2025-02-14T09:10:15.893054" elapsed="6.693177"/>
+</kw>
+<kw name="Adicionar Item Ao carirnho" owner="checkout">
+<kw name="Mouse Move Relative To" owner="Browser">
+<msg time="2025-02-14T09:10:22.626441" level="INFO">Moving mouse relative to element center by x: 0.0, y: 0.0 coordinates.</msg>
+<arg>${home.topBar}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Moves the mouse cursor relative to the selected element.</doc>
+<status status="PASS" start="2025-02-14T09:10:22.586231" elapsed="0.059806"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-02-14T09:10:22.650552" level="INFO">Clicks the element '(//a[@title='Summer Dresses'])[2]'.</msg>
+<arg>${home.opcaoTopBar}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-02-14T09:10:22.646037" elapsed="0.761431"/>
+</kw>
+<kw name="Scroll To Element" owner="Browser">
+<arg>${pesquisa.resultados}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>This method waits for actionability checks, then tries to scroll element into view,
+unless it is completely visible.</doc>
+<status status="PASS" start="2025-02-14T09:10:23.407468" elapsed="0.864268"/>
+</kw>
+<kw name="Mouse Move Relative To" owner="Browser">
+<msg time="2025-02-14T09:10:24.287652" level="INFO">Moving mouse relative to element center by x: 0.0, y: 0.0 coordinates.</msg>
+<arg>${pesquisa.resultados}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Moves the mouse cursor relative to the selected element.</doc>
+<status status="PASS" start="2025-02-14T09:10:24.271736" elapsed="0.023909"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-02-14T09:10:24.295645" level="INFO">Clicks the element '(//div[@class='right-block']//a)[1]'.</msg>
+<arg>${pesquisa.clickResultado}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-02-14T09:10:24.295645" elapsed="0.519465"/>
+</kw>
+<kw name="Mouse Move Relative To" owner="Browser">
+<msg time="2025-02-14T09:10:25.652637" level="INFO">Moving mouse relative to element center by x: 0.0, y: 0.0 coordinates.</msg>
+<arg>${produto.cor}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Moves the mouse cursor relative to the selected element.</doc>
+<status status="PASS" start="2025-02-14T09:10:24.815110" elapsed="0.837527"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-02-14T09:10:25.661642" level="INFO">Clicks the element '(//a[@class='color_pick'])[1]'.</msg>
+<arg>${produto.cor}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-02-14T09:10:25.652637" elapsed="0.426329"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-02-14T09:10:26.086987" level="INFO">Clicks the element '//p[@id="add_to_cart"]/button[@name="Submit"]/span'.</msg>
+<arg>${produto.addCart}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-02-14T09:10:26.086987" elapsed="0.945951"/>
+</kw>
+<kw name="Wait And Click Element" owner="customKeywords">
+<kw name="Scroll To Element" owner="Browser">
+<arg>${locator}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>This method waits for actionability checks, then tries to scroll element into view,
+unless it is completely visible.</doc>
+<status status="PASS" start="2025-02-14T09:10:27.032938" elapsed="0.427024"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2025-02-14T09:10:27.459962" level="INFO">Waited for Element with selector //span[normalize-space(text())='Proceed to checkout'] at state visible</msg>
+<arg>${locator}</arg>
+<arg>visible</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2025-02-14T09:10:27.459962" elapsed="0.000000"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-02-14T09:10:27.459962" level="INFO">Clicks the element '//span[normalize-space(text())='Proceed to checkout']'.</msg>
+<arg>${locator}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-02-14T09:10:27.459962" elapsed="0.621368"/>
+</kw>
+<arg>${produto.irParaCheckout}</arg>
+<status status="PASS" start="2025-02-14T09:10:27.032938" elapsed="1.048392"/>
+</kw>
+<status status="PASS" start="2025-02-14T09:10:22.586231" elapsed="5.495099"/>
+</kw>
+<kw name="Remover Item do carrinho" owner="checkout">
+<kw name="Wait And Click Element" owner="customKeywords">
+<kw name="Scroll To Element" owner="Browser">
+<arg>${locator}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>This method waits for actionability checks, then tries to scroll element into view,
+unless it is completely visible.</doc>
+<status status="PASS" start="2025-02-14T09:10:28.081330" elapsed="0.851393"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2025-02-14T09:10:28.940734" level="INFO">Waited for Element with selector //td[@data-title='Delete'] at state visible</msg>
+<arg>${locator}</arg>
+<arg>visible</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2025-02-14T09:10:28.940734" elapsed="0.000000"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-02-14T09:10:28.940734" level="INFO">Clicks the element '//td[@data-title='Delete']'.</msg>
+<arg>${locator}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-02-14T09:10:28.940734" elapsed="0.048476"/>
+</kw>
+<arg>${carrinho.remover}</arg>
+<status status="PASS" start="2025-02-14T09:10:28.081330" elapsed="0.907880"/>
+</kw>
+<kw name="Wait Element Should Contain Text" owner="customKeywords">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2025-02-14T09:10:30.289821" level="INFO">Waited for Element with selector //p[@class='alert alert-warning'] at state visible</msg>
+<arg>${locator}</arg>
+<arg>visible</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2025-02-14T09:10:28.989210" elapsed="1.300611"/>
+</kw>
+<kw name="Get Text" owner="Browser">
+<msg time="2025-02-14T09:10:30.305810" level="INFO">Text: 'Your shopping cart is empty.'</msg>
+<arg>${locator}</arg>
+<arg>==</arg>
+<arg>${expectedText}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2025-02-14T09:10:30.289821" elapsed="0.015989"/>
+</kw>
+<arg>//p[@class='alert alert-warning']</arg>
+<arg>Your shopping cart is empty.</arg>
+<status status="PASS" start="2025-02-14T09:10:28.989210" elapsed="1.316600"/>
+</kw>
+<status status="PASS" start="2025-02-14T09:10:28.081330" elapsed="2.224480"/>
+</kw>
+<status status="PASS" start="2025-02-14T09:10:15.893054" elapsed="14.412756"/>
+</test>
+<test id="s1-s1-s1-t6" name="Cenario: Finalizar Compra" line="25">
+<kw name="Abrir Browser" owner="openBrowser" type="SETUP">
+<kw name="Open Browser" owner="Browser">
+<msg time="2025-02-14T09:10:30.378019" level="WARN">Open Browser is for quick experimentation and debugging only. Use New Page for production.</msg>
+<msg time="2025-02-14T09:10:30.378019" level="INFO">Switching browser to browser=bcdf684e-eb8a-407b-badc-d401981da7c4</msg>
+<msg time="2025-02-14T09:10:30.378019" level="INFO">Successfully changed active browser: browser=bcdf684e-eb8a-407b-badc-d401981da7c4</msg>
+<msg time="2025-02-14T09:10:30.378019" level="INFO">Reusing existing browser with id: browser=bcdf684e-eb8a-407b-badc-d401981da7c4</msg>
+<msg time="2025-02-14T09:10:30.386019" level="INFO">{
+  "acceptDownloads": true,
+  "bypassCSP": true,
+  "forcedColors": "none",
+  "ignoreHTTPSErrors": false,
+  "javaScriptEnabled": true,
+  "offline": false,
+  "reducedMotion": "no-preference",
+  "serviceWorkers": "allow",
+  "viewport": {
+    "height": 720,
+    "width": 1280
+  }
+}</msg>
+<msg time="2025-02-14T09:10:30.394017" level="INFO">Successfully created context. </msg>
+<msg time="2025-02-14T09:10:30.394017" level="INFO">{'acceptDownloads': True, 'bypassCSP': True, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'height': 720, 'width': 1280}}</msg>
+<msg time="2025-02-14T09:10:35.487634" level="INFO">Successfully initialized new page object and opened url: http://www.automationpractice.pl/index.php</msg>
+<arg>url=http://www.automationpractice.pl/index.php</arg>
+<arg>browser=chromium</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Opens a new browser instance. Use this keyword for quick experiments or debugging sessions.</doc>
+<status status="PASS" start="2025-02-14T09:10:30.378019" elapsed="5.109615"/>
+</kw>
+<status status="PASS" start="2025-02-14T09:10:30.378019" elapsed="5.109615"/>
+</kw>
+<kw name="Finalizar checkout" owner="checkout">
+<kw name="Gerar Email Aleatorio" owner="customKeywords">
+<kw name="Evaluate JavaScript" owner="Browser">
+<msg time="2025-02-14T09:10:35.535668" level="INFO">JavaScript executed successfully.</msg>
+<msg time="2025-02-14T09:10:35.535668" level="INFO">${email} = user3154@test.com</msg>
+<var>${email}</var>
+<arg>css=body</arg>
+<arg>() =&gt; { return 'user' + Math.floor(Math.random() * 10000) + '@test.com'; }</arg>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Executes given javascript on the selected element(s) or on page.</doc>
+<status status="PASS" start="2025-02-14T09:10:35.487634" elapsed="0.048034"/>
+</kw>
+<return>
+<value>${email}</value>
+<status status="PASS" start="2025-02-14T09:10:35.535668" elapsed="0.007967"/>
+</return>
+<msg time="2025-02-14T09:10:35.543635" level="INFO">${email} = user3154@test.com</msg>
+<var>${email}</var>
+<status status="PASS" start="2025-02-14T09:10:35.487634" elapsed="0.056001"/>
+</kw>
+<kw name="Adicionar Item Ao carirnho" owner="checkout">
+<kw name="Mouse Move Relative To" owner="Browser">
+<msg time="2025-02-14T09:10:35.568315" level="INFO">Moving mouse relative to element center by x: 0.0, y: 0.0 coordinates.</msg>
+<arg>${home.topBar}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Moves the mouse cursor relative to the selected element.</doc>
+<status status="PASS" start="2025-02-14T09:10:35.543635" elapsed="0.040692"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-02-14T09:10:35.584327" level="INFO">Clicks the element '(//a[@title='Summer Dresses'])[2]'.</msg>
+<arg>${home.opcaoTopBar}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-02-14T09:10:35.584327" elapsed="0.816136"/>
+</kw>
+<kw name="Scroll To Element" owner="Browser">
+<arg>${pesquisa.resultados}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>This method waits for actionability checks, then tries to scroll element into view,
+unless it is completely visible.</doc>
+<status status="PASS" start="2025-02-14T09:10:36.400463" elapsed="0.865971"/>
+</kw>
+<kw name="Mouse Move Relative To" owner="Browser">
+<msg time="2025-02-14T09:10:37.274659" level="INFO">Moving mouse relative to element center by x: 0.0, y: 0.0 coordinates.</msg>
+<arg>${pesquisa.resultados}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Moves the mouse cursor relative to the selected element.</doc>
+<status status="PASS" start="2025-02-14T09:10:37.266434" elapsed="0.040233"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-02-14T09:10:37.306667" level="INFO">Clicks the element '(//div[@class='right-block']//a)[1]'.</msg>
+<arg>${pesquisa.clickResultado}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-02-14T09:10:37.306667" elapsed="0.546579"/>
+</kw>
+<kw name="Mouse Move Relative To" owner="Browser">
+<msg time="2025-02-14T09:10:38.699112" level="INFO">Moving mouse relative to element center by x: 0.0, y: 0.0 coordinates.</msg>
+<arg>${produto.cor}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Moves the mouse cursor relative to the selected element.</doc>
+<status status="PASS" start="2025-02-14T09:10:37.853246" elapsed="0.861869"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-02-14T09:10:38.715115" level="INFO">Clicks the element '(//a[@class='color_pick'])[1]'.</msg>
+<arg>${produto.cor}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-02-14T09:10:38.715115" elapsed="0.436963"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-02-14T09:10:39.160150" level="INFO">Clicks the element '//p[@id="add_to_cart"]/button[@name="Submit"]/span'.</msg>
+<arg>${produto.addCart}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-02-14T09:10:39.152078" elapsed="0.938259"/>
+</kw>
+<kw name="Wait And Click Element" owner="customKeywords">
+<kw name="Scroll To Element" owner="Browser">
+<arg>${locator}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>This method waits for actionability checks, then tries to scroll element into view,
+unless it is completely visible.</doc>
+<status status="PASS" start="2025-02-14T09:10:40.090337" elapsed="0.388697"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2025-02-14T09:10:40.485549" level="INFO">Waited for Element with selector //span[normalize-space(text())='Proceed to checkout'] at state visible</msg>
+<arg>${locator}</arg>
+<arg>visible</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2025-02-14T09:10:40.479034" elapsed="0.006515"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-02-14T09:10:40.485549" level="INFO">Clicks the element '//span[normalize-space(text())='Proceed to checkout']'.</msg>
+<arg>${locator}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-02-14T09:10:40.485549" elapsed="0.433568"/>
+</kw>
+<arg>${produto.irParaCheckout}</arg>
+<status status="PASS" start="2025-02-14T09:10:40.090337" elapsed="0.828780"/>
+</kw>
+<status status="PASS" start="2025-02-14T09:10:35.543635" elapsed="5.375482"/>
+</kw>
+<kw name="Realizar login com Sucesso" owner="login">
+<kw name="Wait And Click Element" owner="customKeywords">
+<kw name="Scroll To Element" owner="Browser">
+<arg>${locator}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>This method waits for actionability checks, then tries to scroll element into view,
+unless it is completely visible.</doc>
+<status status="PASS" start="2025-02-14T09:10:40.919117" elapsed="0.376039"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2025-02-14T09:10:41.295156" level="INFO">Waited for Element with selector //a[@title="Log in to your customer account" and contains(.,'Sign')] at state visible</msg>
+<arg>${locator}</arg>
+<arg>visible</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2025-02-14T09:10:41.295156" elapsed="0.000000"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-02-14T09:10:41.303167" level="INFO">Clicks the element '//a[@title="Log in to your customer account" and contains(.,'Sign')]'.</msg>
+<arg>${locator}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-02-14T09:10:41.295156" elapsed="0.685513"/>
+</kw>
+<arg>${home.sign}</arg>
+<status status="PASS" start="2025-02-14T09:10:40.919117" elapsed="1.061552"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2025-02-14T09:10:41.980669" level="INFO">Fills the text 'pablo@pablo.com.br' in the given field.</msg>
+<arg>${login.inputEmail}</arg>
+<arg>pablo@pablo.com.br</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2025-02-14T09:10:41.980669" elapsed="0.324296"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2025-02-14T09:10:42.304965" level="INFO">Fills the text '123Test@' in the given field.</msg>
+<arg>${login.inputPassword}</arg>
+<arg>123Test@</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2025-02-14T09:10:42.304965" elapsed="0.032002"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-02-14T09:10:42.336967" level="INFO">Clicks the element '//button[@id="SubmitLogin"]'.</msg>
+<arg>${login.signinButton}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-02-14T09:10:42.336967" elapsed="0.829039"/>
+</kw>
+<kw name="Wait Element Should Contain Text" owner="customKeywords">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2025-02-14T09:10:43.511952" level="INFO">Waited for Element with selector //h1[normalize-space(text())='My account'] at state visible</msg>
+<arg>${locator}</arg>
+<arg>visible</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2025-02-14T09:10:43.166006" elapsed="0.345946"/>
+</kw>
+<kw name="Get Text" owner="Browser">
+<msg time="2025-02-14T09:10:43.527949" level="INFO">Text: 'MY ACCOUNT'</msg>
+<arg>${locator}</arg>
+<arg>==</arg>
+<arg>${expectedText}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2025-02-14T09:10:43.511952" elapsed="0.015997"/>
+</kw>
+<arg>//h1[normalize-space(text())='My account']</arg>
+<arg>MY ACCOUNT</arg>
+<status status="PASS" start="2025-02-14T09:10:43.166006" elapsed="0.361943"/>
+</kw>
+<status status="PASS" start="2025-02-14T09:10:40.919117" elapsed="2.608832"/>
+</kw>
+<kw name="Mouse Move Relative To" owner="Browser">
+<msg time="2025-02-14T09:10:43.535948" level="INFO">Moving mouse relative to element center by x: 0.0, y: 0.0 coordinates.</msg>
+<arg>${carrinho.cart}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Moves the mouse cursor relative to the selected element.</doc>
+<status status="PASS" start="2025-02-14T09:10:43.527949" elapsed="0.043137"/>
+</kw>
+<kw name="Wait And Click Element" owner="customKeywords">
+<kw name="Scroll To Element" owner="Browser">
+<arg>${locator}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>This method waits for actionability checks, then tries to scroll element into view,
+unless it is completely visible.</doc>
+<status status="PASS" start="2025-02-14T09:10:43.571086" elapsed="0.036719"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2025-02-14T09:10:43.615638" level="INFO">Waited for Element with selector //span[normalize-space(text())='Check out'] at state visible</msg>
+<arg>${locator}</arg>
+<arg>visible</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2025-02-14T09:10:43.607805" elapsed="0.007833"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-02-14T09:10:43.615638" level="INFO">Clicks the element '//span[normalize-space(text())='Check out']'.</msg>
+<arg>${locator}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-02-14T09:10:43.615638" elapsed="1.397756"/>
+</kw>
+<arg>${carrinho.checkout}</arg>
+<status status="PASS" start="2025-02-14T09:10:43.571086" elapsed="1.442308"/>
+</kw>
+<kw name="Wait And Click Element" owner="customKeywords">
+<kw name="Scroll To Element" owner="Browser">
+<arg>${locator}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>This method waits for actionability checks, then tries to scroll element into view,
+unless it is completely visible.</doc>
+<status status="PASS" start="2025-02-14T09:10:45.021408" elapsed="0.072382"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2025-02-14T09:10:45.093790" level="INFO">Waited for Element with selector //span[text()='Proceed to checkout'] at state visible</msg>
+<arg>${locator}</arg>
+<arg>visible</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2025-02-14T09:10:45.093790" elapsed="0.000000"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-02-14T09:10:45.093790" level="INFO">Clicks the element '//span[text()='Proceed to checkout']'.</msg>
+<arg>${locator}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-02-14T09:10:45.093790" elapsed="0.533409"/>
+</kw>
+<arg>${carrinho.CarrinhoParaCheckout}</arg>
+<status status="PASS" start="2025-02-14T09:10:45.013394" elapsed="0.613805"/>
+</kw>
+<kw name="Wait And Click Element" owner="customKeywords">
+<kw name="Scroll To Element" owner="Browser">
+<arg>${locator}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>This method waits for actionability checks, then tries to scroll element into view,
+unless it is completely visible.</doc>
+<status status="PASS" start="2025-02-14T09:10:45.635194" elapsed="0.356671"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2025-02-14T09:10:45.994959" level="INFO">Waited for Element with selector //span[text()='Proceed to checkout'] at state visible</msg>
+<arg>${locator}</arg>
+<arg>visible</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2025-02-14T09:10:45.994959" elapsed="0.000000"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-02-14T09:10:45.994959" level="INFO">Clicks the element '//span[text()='Proceed to checkout']'.</msg>
+<arg>${locator}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-02-14T09:10:45.994959" elapsed="0.460526"/>
+</kw>
+<arg>${carrinho.CarrinhoParaCheckout}</arg>
+<status status="PASS" start="2025-02-14T09:10:45.627199" elapsed="0.828399"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-02-14T09:10:46.456435" level="INFO">Clicks the element '//input[@id="cgv"]'.</msg>
+<arg>${entrega.termos}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-02-14T09:10:46.455855" elapsed="0.282137"/>
+</kw>
+<kw name="Wait And Click Element" owner="customKeywords">
+<kw name="Scroll To Element" owner="Browser">
+<arg>${locator}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>This method waits for actionability checks, then tries to scroll element into view,
+unless it is completely visible.</doc>
+<status status="PASS" start="2025-02-14T09:10:46.737992" elapsed="0.032006"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2025-02-14T09:10:46.781036" level="INFO">Waited for Element with selector //button[contains(.,'Proceed to checkout')] at state visible</msg>
+<arg>${locator}</arg>
+<arg>visible</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2025-02-14T09:10:46.769998" elapsed="0.011038"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-02-14T09:10:46.781036" level="INFO">Clicks the element '//button[contains(.,'Proceed to checkout')]'.</msg>
+<arg>${locator}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-02-14T09:10:46.781036" elapsed="0.502880"/>
+</kw>
+<arg>${entrega.confirm}</arg>
+<status status="PASS" start="2025-02-14T09:10:46.737992" elapsed="0.553929"/>
+</kw>
+<kw name="Wait And Click Element" owner="customKeywords">
+<kw name="Scroll To Element" owner="Browser">
+<arg>${locator}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>This method waits for actionability checks, then tries to scroll element into view,
+unless it is completely visible.</doc>
+<status status="PASS" start="2025-02-14T09:10:47.291921" elapsed="0.064511"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2025-02-14T09:10:47.364432" level="INFO">Waited for Element with selector //a[@title='Pay by bank wire'] at state visible</msg>
+<arg>${locator}</arg>
+<arg>visible</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2025-02-14T09:10:47.356432" elapsed="0.008000"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-02-14T09:10:47.364432" level="INFO">Clicks the element '//a[@title='Pay by bank wire']'.</msg>
+<arg>${locator}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-02-14T09:10:47.364432" elapsed="0.566486"/>
+</kw>
+<arg>${pagamento.metodo}</arg>
+<status status="PASS" start="2025-02-14T09:10:47.291921" elapsed="0.638997"/>
+</kw>
+<kw name="Wait And Click Element" owner="customKeywords">
+<kw name="Scroll To Element" owner="Browser">
+<arg>${locator}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>This method waits for actionability checks, then tries to scroll element into view,
+unless it is completely visible.</doc>
+<status status="PASS" start="2025-02-14T09:10:47.930918" elapsed="0.073121"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2025-02-14T09:10:48.011942" level="INFO">Waited for Element with selector //button[contains(.,'I confirm my order')] at state visible</msg>
+<arg>${locator}</arg>
+<arg>visible</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2025-02-14T09:10:48.004039" elapsed="0.007903"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-02-14T09:10:48.011942" level="INFO">Clicks the element '//button[contains(.,'I confirm my order')]'.</msg>
+<arg>${locator}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-02-14T09:10:48.011942" elapsed="4.421319"/>
+</kw>
+<arg>${pagamento.confirmado}</arg>
+<status status="PASS" start="2025-02-14T09:10:47.930918" elapsed="4.502343"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-02-14T09:10:57.433781" level="INFO">Slept 5 seconds.</msg>
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-02-14T09:10:52.433261" elapsed="5.000520"/>
+</kw>
+<kw name="Wait Element Should Contain Text" owner="customKeywords">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2025-02-14T09:10:57.449790" level="INFO">Waited for Element with selector //p[@class='alert alert-success'] at state visible</msg>
+<arg>${locator}</arg>
+<arg>visible</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2025-02-14T09:10:57.433781" elapsed="0.016009"/>
+</kw>
+<kw name="Get Text" owner="Browser">
+<msg time="2025-02-14T09:10:57.477023" level="INFO">Text: 'Your order on My Shop is complete.'</msg>
+<arg>${locator}</arg>
+<arg>==</arg>
+<arg>${expectedText}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2025-02-14T09:10:57.449790" elapsed="0.027740"/>
+</kw>
+<arg>//p[@class='alert alert-success']</arg>
+<arg>Your order on My Shop is complete.</arg>
+<status status="PASS" start="2025-02-14T09:10:57.433781" elapsed="0.043749"/>
+</kw>
+<status status="PASS" start="2025-02-14T09:10:35.487634" elapsed="21.989896"/>
+</kw>
+<status status="PASS" start="2025-02-14T09:10:30.378019" elapsed="27.099959"/>
+</test>
+<test id="s1-s1-s1-t7" name="Cenario: Ordenação de itens" line="28">
+<kw name="Abrir Browser" owner="openBrowser" type="SETUP">
+<kw name="Open Browser" owner="Browser">
+<msg time="2025-02-14T09:10:57.546569" level="WARN">Open Browser is for quick experimentation and debugging only. Use New Page for production.</msg>
+<msg time="2025-02-14T09:10:57.546569" level="INFO">Switching browser to browser=bcdf684e-eb8a-407b-badc-d401981da7c4</msg>
+<msg time="2025-02-14T09:10:57.546569" level="INFO">Successfully changed active browser: browser=bcdf684e-eb8a-407b-badc-d401981da7c4</msg>
+<msg time="2025-02-14T09:10:57.546569" level="INFO">Reusing existing browser with id: browser=bcdf684e-eb8a-407b-badc-d401981da7c4</msg>
+<msg time="2025-02-14T09:10:57.546569" level="INFO">{
+  "acceptDownloads": true,
+  "bypassCSP": true,
+  "forcedColors": "none",
+  "ignoreHTTPSErrors": false,
+  "javaScriptEnabled": true,
+  "offline": false,
+  "reducedMotion": "no-preference",
+  "serviceWorkers": "allow",
+  "viewport": {
+    "height": 720,
+    "width": 1280
+  }
+}</msg>
+<msg time="2025-02-14T09:10:57.554555" level="INFO">Successfully created context. </msg>
+<msg time="2025-02-14T09:10:57.554555" level="INFO">{'acceptDownloads': True, 'bypassCSP': True, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'height': 720, 'width': 1280}}</msg>
+<msg time="2025-02-14T09:11:04.155528" level="INFO">Successfully initialized new page object and opened url: http://www.automationpractice.pl/index.php</msg>
+<arg>url=http://www.automationpractice.pl/index.php</arg>
+<arg>browser=chromium</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Opens a new browser instance. Use this keyword for quick experiments or debugging sessions.</doc>
+<status status="PASS" start="2025-02-14T09:10:57.546569" elapsed="6.608959"/>
+</kw>
+<status status="PASS" start="2025-02-14T09:10:57.538577" elapsed="6.616951"/>
+</kw>
+<kw name="Realizar ordenacao de itens" owner="ordenacao">
+<kw name="Mouse Move Relative To" owner="Browser">
+<msg time="2025-02-14T09:11:04.195528" level="INFO">Moving mouse relative to element center by x: 0.0, y: 0.0 coordinates.</msg>
+<arg>${home.topBar}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Moves the mouse cursor relative to the selected element.</doc>
+<status status="PASS" start="2025-02-14T09:11:04.155528" elapsed="0.056063"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-02-14T09:11:04.211591" level="INFO">Clicks the element '(//a[@title='Summer Dresses'])[2]'.</msg>
+<arg>${home.opcaoTopBar}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-02-14T09:11:04.211591" elapsed="0.889853"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-02-14T09:11:10.101822" level="INFO">Slept 5 seconds.</msg>
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-02-14T09:11:05.101444" elapsed="5.000378"/>
+</kw>
+<kw name="Select Options By" owner="Browser">
+<msg time="2025-02-14T09:11:10.101822" level="INFO">Selects the option(s) Price: Lowest first by attribute SelectAttribute.label from element css=#selectProductSort.</msg>
+<arg>css=#selectProductSort</arg>
+<arg>label</arg>
+<arg>Price: Lowest first</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Selects options from select element found by ``selector``.</doc>
+<status status="PASS" start="2025-02-14T09:11:10.101822" elapsed="0.959633"/>
+</kw>
+<kw name="Validar Ordenação Por Preço Crescente" owner="ordenacao">
+<kw name="Get Text" owner="Browser">
+<msg time="2025-02-14T09:11:11.077449" level="INFO">Text: '\n\t\t\t\t\t\t\t\t\t\t$16\t\t\t\t\t\t\t\t\t'</msg>
+<msg time="2025-02-14T09:11:11.077449" level="INFO">${prices} = 
+										$16									</msg>
+<var>${prices}</var>
+<arg>.product_list .price.product-price</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2025-02-14T09:11:11.061455" elapsed="0.015994"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-02-14T09:11:11.077449" level="INFO">Prices extracted: 
+										$16									</msg>
+<arg>Prices extracted: ${prices}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-02-14T09:11:11.077449" elapsed="0.000000"/>
+</kw>
+<kw name="Create List" owner="BuiltIn">
+<msg time="2025-02-14T09:11:11.077449" level="INFO">${prices_clean} = []</msg>
+<var>${prices_clean}</var>
+<doc>Returns a list containing given items.</doc>
+<status status="PASS" start="2025-02-14T09:11:11.077449" elapsed="0.000000"/>
+</kw>
+<for flavor="IN">
+<iter>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-02-14T09:11:11.077449" level="INFO">${cleaned_price} = 16</msg>
+<var>${cleaned_price}</var>
+<arg>${price.strip().strip('$')}</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-02-14T09:11:11.077449" elapsed="0.000000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-02-14T09:11:11.077449" level="INFO">Cleaned price: 16</msg>
+<arg>Cleaned price: ${cleaned_price}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-02-14T09:11:11.077449" elapsed="0.000000"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-02-14T09:11:11.077449" level="INFO">${price_number} = 16.0</msg>
+<var>${price_number}</var>
+<arg>float(${cleaned_price})</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-02-14T09:11:11.077449" elapsed="0.000000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-02-14T09:11:11.077449" level="INFO">Converted price: 16.0</msg>
+<arg>Converted price: ${price_number}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-02-14T09:11:11.077449" elapsed="0.000000"/>
+</kw>
+<kw name="Append To List" owner="Collections">
+<arg>${prices_clean}</arg>
+<arg>${price_number}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2025-02-14T09:11:11.077449" elapsed="0.000000"/>
+</kw>
+<var name="${price}">
+										$16									</var>
+<status status="PASS" start="2025-02-14T09:11:11.077449" elapsed="0.000000"/>
+</iter>
+<var>${price}</var>
+<value>${prices}</value>
+<status status="PASS" start="2025-02-14T09:11:11.077449" elapsed="0.000000"/>
+</for>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-02-14T09:11:11.077449" level="INFO">${sorted_prices} = [16.0]</msg>
+<var>${sorted_prices}</var>
+<arg>sorted(${prices_clean})</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-02-14T09:11:11.077449" elapsed="0.000000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-02-14T09:11:11.077449" level="INFO">Sorted prices: [16.0]</msg>
+<arg>Sorted prices: ${sorted_prices}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-02-14T09:11:11.077449" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${prices_clean}</arg>
+<arg>${sorted_prices}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2025-02-14T09:11:11.077449" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2025-02-14T09:11:11.061455" elapsed="0.015994"/>
+</kw>
+<status status="PASS" start="2025-02-14T09:11:04.155528" elapsed="6.921921"/>
+</kw>
+<status status="PASS" start="2025-02-14T09:10:57.538577" elapsed="13.546865"/>
+</test>
+<doc>Suite para cadastro de conta</doc>
+<status status="PASS" start="2025-02-14T09:09:30.228207" elapsed="100.914793"/>
+</suite>
+<status status="PASS" start="2025-02-14T09:09:30.228207" elapsed="100.914793"/>
+</suite>
+<suite id="s1-s2" name="ECommerce" source="C:\Users\p_cra\Documents\AmigoTech\ECommerce">
+<suite id="s1-s2-s1" name="Test" source="C:\Users\p_cra\Documents\AmigoTech\ECommerce\test">
+<suite id="s1-s2-s1-s1" name="testesEcommecer" source="C:\Users\p_cra\Documents\AmigoTech\ECommerce\test\testesEcommecer.robot">
+<test id="s1-s2-s1-s1-t1" name="Cenario: Realizar login com Sucesso" line="7">
+<kw name="Abrir Browser" owner="openBrowser" type="SETUP">
+<kw name="Open Browser" owner="Browser">
+<msg time="2025-02-14T09:11:11.181655" level="WARN">Open Browser is for quick experimentation and debugging only. Use New Page for production.</msg>
+<msg time="2025-02-14T09:11:11.181655" level="INFO">Switching browser to browser=bcdf684e-eb8a-407b-badc-d401981da7c4</msg>
+<msg time="2025-02-14T09:11:11.181655" level="INFO">Successfully changed active browser: browser=bcdf684e-eb8a-407b-badc-d401981da7c4</msg>
+<msg time="2025-02-14T09:11:11.181655" level="INFO">Reusing existing browser with id: browser=bcdf684e-eb8a-407b-badc-d401981da7c4</msg>
+<msg time="2025-02-14T09:11:11.181655" level="INFO">{
+  "acceptDownloads": true,
+  "bypassCSP": true,
+  "forcedColors": "none",
+  "ignoreHTTPSErrors": false,
+  "javaScriptEnabled": true,
+  "offline": false,
+  "reducedMotion": "no-preference",
+  "serviceWorkers": "allow",
+  "viewport": {
+    "height": 720,
+    "width": 1280
+  }
+}</msg>
+<msg time="2025-02-14T09:11:11.197645" level="INFO">Successfully created context. </msg>
+<msg time="2025-02-14T09:11:11.197645" level="INFO">{'acceptDownloads': True, 'bypassCSP': True, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'height': 720, 'width': 1280}}</msg>
+<msg time="2025-02-14T09:11:17.576779" level="INFO">Successfully initialized new page object and opened url: http://www.automationpractice.pl/index.php</msg>
+<arg>url=http://www.automationpractice.pl/index.php</arg>
+<arg>browser=chromium</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Opens a new browser instance. Use this keyword for quick experiments or debugging sessions.</doc>
+<status status="PASS" start="2025-02-14T09:11:11.181655" elapsed="6.403113"/>
+</kw>
+<status status="PASS" start="2025-02-14T09:11:11.181655" elapsed="6.403113"/>
+</kw>
+<kw name="Realizar login com Sucesso" owner="login">
+<kw name="Wait And Click Element" owner="customKeywords">
+<kw name="Scroll To Element" owner="Browser">
+<arg>${locator}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>This method waits for actionability checks, then tries to scroll element into view,
+unless it is completely visible.</doc>
+<status status="PASS" start="2025-02-14T09:11:17.584768" elapsed="0.048006"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2025-02-14T09:11:17.640787" level="INFO">Waited for Element with selector //a[@title="Log in to your customer account" and contains(.,'Sign')] at state visible</msg>
+<arg>${locator}</arg>
+<arg>visible</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2025-02-14T09:11:17.632774" elapsed="0.008013"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-02-14T09:11:17.640787" level="INFO">Clicks the element '//a[@title="Log in to your customer account" and contains(.,'Sign')]'.</msg>
+<arg>${locator}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-02-14T09:11:17.640787" elapsed="0.633221"/>
+</kw>
+<arg>${home.sign}</arg>
+<status status="PASS" start="2025-02-14T09:11:17.584768" elapsed="0.689240"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2025-02-14T09:11:18.274008" level="INFO">Fills the text 'pablo@pablo.com.br' in the given field.</msg>
+<arg>${login.inputEmail}</arg>
+<arg>pablo@pablo.com.br</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2025-02-14T09:11:18.274008" elapsed="0.842059"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2025-02-14T09:11:19.116067" level="INFO">Fills the text '123Test@' in the given field.</msg>
+<arg>${login.inputPassword}</arg>
+<arg>123Test@</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2025-02-14T09:11:19.116067" elapsed="0.032019"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-02-14T09:11:19.148086" level="INFO">Clicks the element '//button[@id="SubmitLogin"]'.</msg>
+<arg>${login.signinButton}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-02-14T09:11:19.148086" elapsed="0.668588"/>
+</kw>
+<kw name="Wait Element Should Contain Text" owner="customKeywords">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2025-02-14T09:11:20.057654" level="INFO">Waited for Element with selector //h1[normalize-space(text())='My account'] at state visible</msg>
+<arg>${locator}</arg>
+<arg>visible</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2025-02-14T09:11:19.816674" elapsed="0.240980"/>
+</kw>
+<kw name="Get Text" owner="Browser">
+<msg time="2025-02-14T09:11:20.086993" level="INFO">Text: 'MY ACCOUNT'</msg>
+<arg>${locator}</arg>
+<arg>==</arg>
+<arg>${expectedText}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2025-02-14T09:11:20.062722" elapsed="0.024271"/>
+</kw>
+<arg>//h1[normalize-space(text())='My account']</arg>
+<arg>MY ACCOUNT</arg>
+<status status="PASS" start="2025-02-14T09:11:19.816674" elapsed="0.270319"/>
+</kw>
+<status status="PASS" start="2025-02-14T09:11:17.584768" elapsed="2.502225"/>
+</kw>
+<status status="PASS" start="2025-02-14T09:11:11.173675" elapsed="8.913318"/>
+</test>
+<test id="s1-s2-s1-s1-t2" name="Cenario: Realizar login com Falha" line="10">
+<kw name="Abrir Browser" owner="openBrowser" type="SETUP">
+<kw name="Open Browser" owner="Browser">
+<msg time="2025-02-14T09:11:20.159142" level="WARN">Open Browser is for quick experimentation and debugging only. Use New Page for production.</msg>
+<msg time="2025-02-14T09:11:20.159142" level="INFO">Switching browser to browser=bcdf684e-eb8a-407b-badc-d401981da7c4</msg>
+<msg time="2025-02-14T09:11:20.159142" level="INFO">Successfully changed active browser: browser=bcdf684e-eb8a-407b-badc-d401981da7c4</msg>
+<msg time="2025-02-14T09:11:20.159142" level="INFO">Reusing existing browser with id: browser=bcdf684e-eb8a-407b-badc-d401981da7c4</msg>
+<msg time="2025-02-14T09:11:20.159142" level="INFO">{
+  "acceptDownloads": true,
+  "bypassCSP": true,
+  "forcedColors": "none",
+  "ignoreHTTPSErrors": false,
+  "javaScriptEnabled": true,
+  "offline": false,
+  "reducedMotion": "no-preference",
+  "serviceWorkers": "allow",
+  "viewport": {
+    "height": 720,
+    "width": 1280
+  }
+}</msg>
+<msg time="2025-02-14T09:11:20.171900" level="INFO">Successfully created context. </msg>
+<msg time="2025-02-14T09:11:20.171900" level="INFO">{'acceptDownloads': True, 'bypassCSP': True, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'height': 720, 'width': 1280}}</msg>
+<msg time="2025-02-14T09:11:25.054033" level="INFO">Successfully initialized new page object and opened url: http://www.automationpractice.pl/index.php</msg>
+<arg>url=http://www.automationpractice.pl/index.php</arg>
+<arg>browser=chromium</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Opens a new browser instance. Use this keyword for quick experiments or debugging sessions.</doc>
+<status status="PASS" start="2025-02-14T09:11:20.152044" elapsed="4.902496"/>
+</kw>
+<status status="PASS" start="2025-02-14T09:11:20.152044" elapsed="4.902496"/>
+</kw>
+<kw name="Realizar Login Com Falha" owner="login">
+<kw name="Wait And Click Element" owner="customKeywords">
+<kw name="Scroll To Element" owner="Browser">
+<arg>${locator}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>This method waits for actionability checks, then tries to scroll element into view,
+unless it is completely visible.</doc>
+<status status="PASS" start="2025-02-14T09:11:25.054540" elapsed="0.051539"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2025-02-14T09:11:25.114079" level="INFO">Waited for Element with selector //a[@title="Log in to your customer account" and contains(.,'Sign')] at state visible</msg>
+<arg>${locator}</arg>
+<arg>visible</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2025-02-14T09:11:25.106079" elapsed="0.008000"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-02-14T09:11:25.114079" level="INFO">Clicks the element '//a[@title="Log in to your customer account" and contains(.,'Sign')]'.</msg>
+<arg>${locator}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-02-14T09:11:25.114079" elapsed="0.667355"/>
+</kw>
+<arg>${home.sign}</arg>
+<status status="PASS" start="2025-02-14T09:11:25.054540" elapsed="0.726894"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2025-02-14T09:11:25.784451" level="INFO">Fills the text 'pablo@pablo.com.br' in the given field.</msg>
+<arg>${login.inputEmail}</arg>
+<arg>pablo@pablo.com.br</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2025-02-14T09:11:25.784451" elapsed="0.351042"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2025-02-14T09:11:26.135493" level="INFO">Fills the text '123Test' in the given field.</msg>
+<arg>${login.inputPassword}</arg>
+<arg>123Test</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2025-02-14T09:11:26.135493" elapsed="0.024766"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-02-14T09:11:26.160259" level="INFO">Clicks the element '//button[@id="SubmitLogin"]'.</msg>
+<arg>${login.signinButton}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-02-14T09:11:26.160259" elapsed="0.426150"/>
+</kw>
+<kw name="Wait Element Should Contain Text" owner="customKeywords">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2025-02-14T09:11:26.634409" level="INFO">Waited for Element with selector //div[@class='alert alert-danger']//li[1] at state visible</msg>
+<arg>${locator}</arg>
+<arg>visible</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2025-02-14T09:11:26.586409" elapsed="0.048000"/>
+</kw>
+<kw name="Get Text" owner="Browser">
+<msg time="2025-02-14T09:11:26.661190" level="INFO">Text: 'Authentication failed.'</msg>
+<arg>${locator}</arg>
+<arg>==</arg>
+<arg>${expectedText}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2025-02-14T09:11:26.634409" elapsed="0.026781"/>
+</kw>
+<arg>//div[@class='alert alert-danger']//li[1]</arg>
+<arg>Authentication failed.</arg>
+<status status="PASS" start="2025-02-14T09:11:26.586409" elapsed="0.074781"/>
+</kw>
+<status status="PASS" start="2025-02-14T09:11:25.054540" elapsed="1.606650"/>
+</kw>
+<status status="PASS" start="2025-02-14T09:11:20.152044" elapsed="6.509146"/>
+</test>
+<test id="s1-s2-s1-s1-t3" name="Cenario: Realizar cadastro de Conta" line="13">
+<kw name="Abrir Browser" owner="openBrowser" type="SETUP">
+<kw name="Open Browser" owner="Browser">
+<msg time="2025-02-14T09:11:26.730938" level="WARN">Open Browser is for quick experimentation and debugging only. Use New Page for production.</msg>
+<msg time="2025-02-14T09:11:26.730938" level="INFO">Switching browser to browser=bcdf684e-eb8a-407b-badc-d401981da7c4</msg>
+<msg time="2025-02-14T09:11:26.730938" level="INFO">Successfully changed active browser: browser=bcdf684e-eb8a-407b-badc-d401981da7c4</msg>
+<msg time="2025-02-14T09:11:26.730938" level="INFO">Reusing existing browser with id: browser=bcdf684e-eb8a-407b-badc-d401981da7c4</msg>
+<msg time="2025-02-14T09:11:26.730938" level="INFO">{
+  "acceptDownloads": true,
+  "bypassCSP": true,
+  "forcedColors": "none",
+  "ignoreHTTPSErrors": false,
+  "javaScriptEnabled": true,
+  "offline": false,
+  "reducedMotion": "no-preference",
+  "serviceWorkers": "allow",
+  "viewport": {
+    "height": 720,
+    "width": 1280
+  }
+}</msg>
+<msg time="2025-02-14T09:11:26.746925" level="INFO">Successfully created context. </msg>
+<msg time="2025-02-14T09:11:26.746925" level="INFO">{'acceptDownloads': True, 'bypassCSP': True, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'height': 720, 'width': 1280}}</msg>
+<msg time="2025-02-14T09:11:33.806710" level="INFO">Successfully initialized new page object and opened url: http://www.automationpractice.pl/index.php</msg>
+<arg>url=http://www.automationpractice.pl/index.php</arg>
+<arg>browser=chromium</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Opens a new browser instance. Use this keyword for quick experiments or debugging sessions.</doc>
+<status status="PASS" start="2025-02-14T09:11:26.730938" elapsed="7.075772"/>
+</kw>
+<status status="PASS" start="2025-02-14T09:11:26.730938" elapsed="7.075772"/>
+</kw>
+<kw name="Gerar Email Aleatorio" owner="customKeywords">
+<kw name="Evaluate JavaScript" owner="Browser">
+<msg time="2025-02-14T09:11:33.854699" level="INFO">JavaScript executed successfully.</msg>
+<msg time="2025-02-14T09:11:33.854699" level="INFO">${email} = user9218@test.com</msg>
+<var>${email}</var>
+<arg>css=body</arg>
+<arg>() =&gt; { return 'user' + Math.floor(Math.random() * 10000) + '@test.com'; }</arg>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Executes given javascript on the selected element(s) or on page.</doc>
+<status status="PASS" start="2025-02-14T09:11:33.806710" elapsed="0.047989"/>
+</kw>
+<return>
+<value>${email}</value>
+<status status="PASS" start="2025-02-14T09:11:33.854699" elapsed="0.000000"/>
+</return>
+<msg time="2025-02-14T09:11:33.854699" level="INFO">${email} = user9218@test.com</msg>
+<var>${email}</var>
+<status status="PASS" start="2025-02-14T09:11:33.806710" elapsed="0.047989"/>
+</kw>
+<kw name="Realizar Sign in" owner="cadastro">
+<kw name="Wait And Click Element" owner="customKeywords">
+<kw name="Scroll To Element" owner="Browser">
+<arg>${locator}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>This method waits for actionability checks, then tries to scroll element into view,
+unless it is completely visible.</doc>
+<status status="PASS" start="2025-02-14T09:11:33.854699" elapsed="0.048484"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2025-02-14T09:11:33.903183" level="INFO">Waited for Element with selector //a[@title="Log in to your customer account" and contains(.,'Sign')] at state visible</msg>
+<arg>${locator}</arg>
+<arg>visible</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2025-02-14T09:11:33.903183" elapsed="0.000000"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-02-14T09:11:33.903183" level="INFO">Clicks the element '//a[@title="Log in to your customer account" and contains(.,'Sign')]'.</msg>
+<arg>${locator}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-02-14T09:11:33.903183" elapsed="0.683383"/>
+</kw>
+<arg>${home.sign}</arg>
+<status status="PASS" start="2025-02-14T09:11:33.854699" elapsed="0.731867"/>
+</kw>
+<kw name="Wait And Input Text" owner="customKeywords">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2025-02-14T09:11:34.933037" level="INFO">Waited for Element with selector //input[@id="email_create"] at state visible</msg>
+<arg>${locator}</arg>
+<arg>visible</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2025-02-14T09:11:34.586566" elapsed="0.346471"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2025-02-14T09:11:34.937699" level="INFO">Fills the text 'user9218@test.com' in the given field.</msg>
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2025-02-14T09:11:34.933037" elapsed="0.024384"/>
+</kw>
+<arg>${signin.inputEmail}</arg>
+<arg>${email}</arg>
+<status status="PASS" start="2025-02-14T09:11:34.586566" elapsed="0.370855"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-02-14T09:11:34.957421" level="INFO">Clicks the element '//button[@id="SubmitCreate"]'.</msg>
+<arg>${signin.submitEmail}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-02-14T09:11:34.957421" elapsed="0.072201"/>
+</kw>
+<arg>${email}</arg>
+<status status="PASS" start="2025-02-14T09:11:33.854699" elapsed="1.174923"/>
+</kw>
+<kw name="Criar Conta" owner="cadastro">
+<kw name="Wait And Click Element" owner="customKeywords">
+<kw name="Scroll To Element" owner="Browser">
+<arg>${locator}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>This method waits for actionability checks, then tries to scroll element into view,
+unless it is completely visible.</doc>
+<status status="PASS" start="2025-02-14T09:11:35.031800" elapsed="1.379949"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2025-02-14T09:11:36.419557" level="INFO">Waited for Element with selector //input[@id="id_gender1"] at state visible</msg>
+<arg>${locator}</arg>
+<arg>visible</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2025-02-14T09:11:36.411749" elapsed="0.007808"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-02-14T09:11:36.419557" level="INFO">Clicks the element '//input[@id="id_gender1"]'.</msg>
+<arg>${locator}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-02-14T09:11:36.419557" elapsed="0.039974"/>
+</kw>
+<arg>${cadastrarConta.titulo}</arg>
+<status status="PASS" start="2025-02-14T09:11:35.031268" elapsed="1.428263"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2025-02-14T09:11:36.459531" level="INFO">Fills the text 'Pablo' in the given field.</msg>
+<arg>${cadastrarConta.primeiroNome}</arg>
+<arg>Pablo</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2025-02-14T09:11:36.459531" elapsed="0.016047"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2025-02-14T09:11:36.478096" level="INFO">Fills the text 'Craveiro' in the given field.</msg>
+<arg>${cadastrarConta.ultimoNome}</arg>
+<arg>Craveiro</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2025-02-14T09:11:36.475578" elapsed="0.016031"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2025-02-14T09:11:36.491609" level="INFO">Fills the text '123Test@' in the given field.</msg>
+<arg>${cadastrarConta.senha}</arg>
+<arg>123Test@</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2025-02-14T09:11:36.491609" elapsed="0.016009"/>
+</kw>
+<kw name="Wait And Click Element" owner="customKeywords">
+<kw name="Scroll To Element" owner="Browser">
+<arg>${locator}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>This method waits for actionability checks, then tries to scroll element into view,
+unless it is completely visible.</doc>
+<status status="PASS" start="2025-02-14T09:11:36.507618" elapsed="0.089104"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2025-02-14T09:11:36.604516" level="INFO">Waited for Element with selector //span[normalize-space(text())='Register'] at state visible</msg>
+<arg>${locator}</arg>
+<arg>visible</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2025-02-14T09:11:36.596722" elapsed="0.007794"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-02-14T09:11:36.604516" level="INFO">Clicks the element '//span[normalize-space(text())='Register']'.</msg>
+<arg>${locator}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-02-14T09:11:36.604516" elapsed="3.036064"/>
+</kw>
+<arg>${cadastrarConta.registrar}</arg>
+<status status="PASS" start="2025-02-14T09:11:36.507618" elapsed="3.132962"/>
+</kw>
+<status status="PASS" start="2025-02-14T09:11:35.030766" elapsed="4.609814"/>
+</kw>
+<status status="PASS" start="2025-02-14T09:11:26.722905" elapsed="12.917675"/>
+</test>
+<test id="s1-s2-s1-s1-t4" name="Cenario: Adicionar item ao carrinho" line="18">
+<kw name="Abrir Browser" owner="openBrowser" type="SETUP">
+<kw name="Open Browser" owner="Browser">
+<msg time="2025-02-14T09:11:39.712324" level="WARN">Open Browser is for quick experimentation and debugging only. Use New Page for production.</msg>
+<msg time="2025-02-14T09:11:39.712324" level="INFO">Switching browser to browser=bcdf684e-eb8a-407b-badc-d401981da7c4</msg>
+<msg time="2025-02-14T09:11:39.712324" level="INFO">Successfully changed active browser: browser=bcdf684e-eb8a-407b-badc-d401981da7c4</msg>
+<msg time="2025-02-14T09:11:39.712324" level="INFO">Reusing existing browser with id: browser=bcdf684e-eb8a-407b-badc-d401981da7c4</msg>
+<msg time="2025-02-14T09:11:39.712324" level="INFO">{
+  "acceptDownloads": true,
+  "bypassCSP": true,
+  "forcedColors": "none",
+  "ignoreHTTPSErrors": false,
+  "javaScriptEnabled": true,
+  "offline": false,
+  "reducedMotion": "no-preference",
+  "serviceWorkers": "allow",
+  "viewport": {
+    "height": 720,
+    "width": 1280
+  }
+}</msg>
+<msg time="2025-02-14T09:11:39.728505" level="INFO">Successfully created context. </msg>
+<msg time="2025-02-14T09:11:39.728505" level="INFO">{'acceptDownloads': True, 'bypassCSP': True, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'height': 720, 'width': 1280}}</msg>
+<msg time="2025-02-14T09:11:46.236847" level="INFO">Successfully initialized new page object and opened url: http://www.automationpractice.pl/index.php</msg>
+<arg>url=http://www.automationpractice.pl/index.php</arg>
+<arg>browser=chromium</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Opens a new browser instance. Use this keyword for quick experiments or debugging sessions.</doc>
+<status status="PASS" start="2025-02-14T09:11:39.704309" elapsed="6.532538"/>
+</kw>
+<status status="PASS" start="2025-02-14T09:11:39.704309" elapsed="6.532538"/>
+</kw>
+<kw name="Adicionar Item Ao carirnho" owner="checkout">
+<kw name="Mouse Move Relative To" owner="Browser">
+<msg time="2025-02-14T09:11:46.281678" level="INFO">Moving mouse relative to element center by x: 0.0, y: 0.0 coordinates.</msg>
+<arg>${home.topBar}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Moves the mouse cursor relative to the selected element.</doc>
+<status status="PASS" start="2025-02-14T09:11:46.244971" elapsed="0.040247"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-02-14T09:11:46.285218" level="INFO">Clicks the element '(//a[@title='Summer Dresses'])[2]'.</msg>
+<arg>${home.opcaoTopBar}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-02-14T09:11:46.285218" elapsed="0.904047"/>
+</kw>
+<kw name="Scroll To Element" owner="Browser">
+<arg>${pesquisa.resultados}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>This method waits for actionability checks, then tries to scroll element into view,
+unless it is completely visible.</doc>
+<status status="PASS" start="2025-02-14T09:11:47.189265" elapsed="0.852314"/>
+</kw>
+<kw name="Mouse Move Relative To" owner="Browser">
+<msg time="2025-02-14T09:11:48.052903" level="INFO">Moving mouse relative to element center by x: 0.0, y: 0.0 coordinates.</msg>
+<arg>${pesquisa.resultados}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Moves the mouse cursor relative to the selected element.</doc>
+<status status="PASS" start="2025-02-14T09:11:48.041579" elapsed="0.040819"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-02-14T09:11:48.082398" level="INFO">Clicks the element '(//div[@class='right-block']//a)[1]'.</msg>
+<arg>${pesquisa.clickResultado}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-02-14T09:11:48.082398" elapsed="0.714344"/>
+</kw>
+<kw name="Mouse Move Relative To" owner="Browser">
+<msg time="2025-02-14T09:11:49.632950" level="INFO">Moving mouse relative to element center by x: 0.0, y: 0.0 coordinates.</msg>
+<arg>${produto.cor}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Moves the mouse cursor relative to the selected element.</doc>
+<status status="PASS" start="2025-02-14T09:11:48.797246" elapsed="0.859699"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-02-14T09:11:49.656945" level="INFO">Clicks the element '(//a[@class='color_pick'])[1]'.</msg>
+<arg>${produto.cor}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-02-14T09:11:49.656945" elapsed="0.450278"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-02-14T09:11:50.107223" level="INFO">Clicks the element '//p[@id="add_to_cart"]/button[@name="Submit"]/span'.</msg>
+<arg>${produto.addCart}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-02-14T09:11:50.107223" elapsed="0.942772"/>
+</kw>
+<kw name="Wait And Click Element" owner="customKeywords">
+<kw name="Scroll To Element" owner="Browser">
+<arg>${locator}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>This method waits for actionability checks, then tries to scroll element into view,
+unless it is completely visible.</doc>
+<status status="PASS" start="2025-02-14T09:11:51.049995" elapsed="0.402155"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2025-02-14T09:11:51.460147" level="INFO">Waited for Element with selector //span[normalize-space(text())='Proceed to checkout'] at state visible</msg>
+<arg>${locator}</arg>
+<arg>visible</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2025-02-14T09:11:51.452150" elapsed="0.007997"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-02-14T09:11:51.460147" level="INFO">Clicks the element '//span[normalize-space(text())='Proceed to checkout']'.</msg>
+<arg>${locator}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-02-14T09:11:51.460147" elapsed="0.508415"/>
+</kw>
+<arg>${produto.irParaCheckout}</arg>
+<status status="PASS" start="2025-02-14T09:11:51.049995" elapsed="0.918567"/>
+</kw>
+<status status="PASS" start="2025-02-14T09:11:46.236847" elapsed="5.731715"/>
+</kw>
+<status status="PASS" start="2025-02-14T09:11:39.704309" elapsed="12.264253"/>
+</test>
+<test id="s1-s2-s1-s1-t5" name="Cenario: Remover item do carrinho" line="21">
+<kw name="Abrir Browser" owner="openBrowser" type="SETUP">
+<kw name="Open Browser" owner="Browser">
+<msg time="2025-02-14T09:11:52.032895" level="WARN">Open Browser is for quick experimentation and debugging only. Use New Page for production.</msg>
+<msg time="2025-02-14T09:11:52.032895" level="INFO">Switching browser to browser=bcdf684e-eb8a-407b-badc-d401981da7c4</msg>
+<msg time="2025-02-14T09:11:52.040982" level="INFO">Successfully changed active browser: browser=bcdf684e-eb8a-407b-badc-d401981da7c4</msg>
+<msg time="2025-02-14T09:11:52.040982" level="INFO">Reusing existing browser with id: browser=bcdf684e-eb8a-407b-badc-d401981da7c4</msg>
+<msg time="2025-02-14T09:11:52.040982" level="INFO">{
+  "acceptDownloads": true,
+  "bypassCSP": true,
+  "forcedColors": "none",
+  "ignoreHTTPSErrors": false,
+  "javaScriptEnabled": true,
+  "offline": false,
+  "reducedMotion": "no-preference",
+  "serviceWorkers": "allow",
+  "viewport": {
+    "height": 720,
+    "width": 1280
+  }
+}</msg>
+<msg time="2025-02-14T09:11:52.048882" level="INFO">Successfully created context. </msg>
+<msg time="2025-02-14T09:11:52.048882" level="INFO">{'acceptDownloads': True, 'bypassCSP': True, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'height': 720, 'width': 1280}}</msg>
+<msg time="2025-02-14T09:11:58.747967" level="INFO">Successfully initialized new page object and opened url: http://www.automationpractice.pl/index.php</msg>
+<arg>url=http://www.automationpractice.pl/index.php</arg>
+<arg>browser=chromium</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Opens a new browser instance. Use this keyword for quick experiments or debugging sessions.</doc>
+<status status="PASS" start="2025-02-14T09:11:52.032895" elapsed="6.715072"/>
+</kw>
+<status status="PASS" start="2025-02-14T09:11:52.032895" elapsed="6.715072"/>
+</kw>
+<kw name="Adicionar Item Ao carirnho" owner="checkout">
+<kw name="Mouse Move Relative To" owner="Browser">
+<msg time="2025-02-14T09:11:58.820379" level="INFO">Moving mouse relative to element center by x: 0.0, y: 0.0 coordinates.</msg>
+<arg>${home.topBar}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Moves the mouse cursor relative to the selected element.</doc>
+<status status="PASS" start="2025-02-14T09:11:58.747967" elapsed="0.096447"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-02-14T09:11:58.852429" level="INFO">Clicks the element '(//a[@title='Summer Dresses'])[2]'.</msg>
+<arg>${home.opcaoTopBar}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-02-14T09:11:58.844414" elapsed="1.084231"/>
+</kw>
+<kw name="Scroll To Element" owner="Browser">
+<arg>${pesquisa.resultados}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>This method waits for actionability checks, then tries to scroll element into view,
+unless it is completely visible.</doc>
+<status status="PASS" start="2025-02-14T09:11:59.928645" elapsed="0.898721"/>
+</kw>
+<kw name="Mouse Move Relative To" owner="Browser">
+<msg time="2025-02-14T09:12:00.835364" level="INFO">Moving mouse relative to element center by x: 0.0, y: 0.0 coordinates.</msg>
+<arg>${pesquisa.resultados}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Moves the mouse cursor relative to the selected element.</doc>
+<status status="PASS" start="2025-02-14T09:12:00.827366" elapsed="0.023999"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-02-14T09:12:00.851365" level="INFO">Clicks the element '(//div[@class='right-block']//a)[1]'.</msg>
+<arg>${pesquisa.clickResultado}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-02-14T09:12:00.851365" elapsed="0.666715"/>
+</kw>
+<kw name="Mouse Move Relative To" owner="Browser">
+<msg time="2025-02-14T09:12:02.407832" level="INFO">Moving mouse relative to element center by x: 0.0, y: 0.0 coordinates.</msg>
+<arg>${produto.cor}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Moves the mouse cursor relative to the selected element.</doc>
+<status status="PASS" start="2025-02-14T09:12:01.518080" elapsed="0.913847"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-02-14T09:12:02.431927" level="INFO">Clicks the element '(//a[@class='color_pick'])[1]'.</msg>
+<arg>${produto.cor}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-02-14T09:12:02.431927" elapsed="0.520827"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-02-14T09:12:02.960766" level="INFO">Clicks the element '//p[@id="add_to_cart"]/button[@name="Submit"]/span'.</msg>
+<arg>${produto.addCart}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-02-14T09:12:02.960766" elapsed="0.965457"/>
+</kw>
+<kw name="Wait And Click Element" owner="customKeywords">
+<kw name="Scroll To Element" owner="Browser">
+<arg>${locator}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>This method waits for actionability checks, then tries to scroll element into view,
+unless it is completely visible.</doc>
+<status status="PASS" start="2025-02-14T09:12:03.926223" elapsed="0.433786"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2025-02-14T09:12:04.367988" level="INFO">Waited for Element with selector //span[normalize-space(text())='Proceed to checkout'] at state visible</msg>
+<arg>${locator}</arg>
+<arg>visible</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2025-02-14T09:12:04.360009" elapsed="0.007979"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-02-14T09:12:04.367988" level="INFO">Clicks the element '//span[normalize-space(text())='Proceed to checkout']'.</msg>
+<arg>${locator}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-02-14T09:12:04.367988" elapsed="0.626130"/>
+</kw>
+<arg>${produto.irParaCheckout}</arg>
+<status status="PASS" start="2025-02-14T09:12:03.926223" elapsed="1.067895"/>
+</kw>
+<status status="PASS" start="2025-02-14T09:11:58.747967" elapsed="6.246151"/>
+</kw>
+<kw name="Remover Item do carrinho" owner="checkout">
+<kw name="Wait And Click Element" owner="customKeywords">
+<kw name="Scroll To Element" owner="Browser">
+<arg>${locator}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>This method waits for actionability checks, then tries to scroll element into view,
+unless it is completely visible.</doc>
+<status status="PASS" start="2025-02-14T09:12:04.994118" elapsed="0.908139"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2025-02-14T09:12:05.910257" level="INFO">Waited for Element with selector //td[@data-title='Delete'] at state visible</msg>
+<arg>${locator}</arg>
+<arg>visible</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2025-02-14T09:12:05.902257" elapsed="0.008000"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-02-14T09:12:05.910257" level="INFO">Clicks the element '//td[@data-title='Delete']'.</msg>
+<arg>${locator}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-02-14T09:12:05.910257" elapsed="0.048027"/>
+</kw>
+<arg>${carrinho.remover}</arg>
+<status status="PASS" start="2025-02-14T09:12:04.994118" elapsed="0.964166"/>
+</kw>
+<kw name="Wait Element Should Contain Text" owner="customKeywords">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2025-02-14T09:12:07.360734" level="INFO">Waited for Element with selector //p[@class='alert alert-warning'] at state visible</msg>
+<arg>${locator}</arg>
+<arg>visible</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2025-02-14T09:12:05.961880" elapsed="1.398854"/>
+</kw>
+<kw name="Get Text" owner="Browser">
+<msg time="2025-02-14T09:12:07.394749" level="INFO">Text: 'Your shopping cart is empty.'</msg>
+<arg>${locator}</arg>
+<arg>==</arg>
+<arg>${expectedText}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2025-02-14T09:12:07.360734" elapsed="0.034015"/>
+</kw>
+<arg>//p[@class='alert alert-warning']</arg>
+<arg>Your shopping cart is empty.</arg>
+<status status="PASS" start="2025-02-14T09:12:05.961364" elapsed="1.433385"/>
+</kw>
+<status status="PASS" start="2025-02-14T09:12:04.994118" elapsed="2.400631"/>
+</kw>
+<status status="PASS" start="2025-02-14T09:11:52.032895" elapsed="15.361854"/>
+</test>
+<test id="s1-s2-s1-s1-t6" name="Cenario: Finalizar Compra" line="25">
+<kw name="Abrir Browser" owner="openBrowser" type="SETUP">
+<kw name="Open Browser" owner="Browser">
+<msg time="2025-02-14T09:12:07.458929" level="WARN">Open Browser is for quick experimentation and debugging only. Use New Page for production.</msg>
+<msg time="2025-02-14T09:12:07.458929" level="INFO">Switching browser to browser=bcdf684e-eb8a-407b-badc-d401981da7c4</msg>
+<msg time="2025-02-14T09:12:07.458929" level="INFO">Successfully changed active browser: browser=bcdf684e-eb8a-407b-badc-d401981da7c4</msg>
+<msg time="2025-02-14T09:12:07.458929" level="INFO">Reusing existing browser with id: browser=bcdf684e-eb8a-407b-badc-d401981da7c4</msg>
+<msg time="2025-02-14T09:12:07.458929" level="INFO">{
+  "acceptDownloads": true,
+  "bypassCSP": true,
+  "forcedColors": "none",
+  "ignoreHTTPSErrors": false,
+  "javaScriptEnabled": true,
+  "offline": false,
+  "reducedMotion": "no-preference",
+  "serviceWorkers": "allow",
+  "viewport": {
+    "height": 720,
+    "width": 1280
+  }
+}</msg>
+<msg time="2025-02-14T09:12:07.475154" level="INFO">Successfully created context. </msg>
+<msg time="2025-02-14T09:12:07.475154" level="INFO">{'acceptDownloads': True, 'bypassCSP': True, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'height': 720, 'width': 1280}}</msg>
+<msg time="2025-02-14T09:12:12.439241" level="INFO">Successfully initialized new page object and opened url: http://www.automationpractice.pl/index.php</msg>
+<arg>url=http://www.automationpractice.pl/index.php</arg>
+<arg>browser=chromium</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Opens a new browser instance. Use this keyword for quick experiments or debugging sessions.</doc>
+<status status="PASS" start="2025-02-14T09:12:07.458929" elapsed="4.980312"/>
+</kw>
+<status status="PASS" start="2025-02-14T09:12:07.458929" elapsed="4.980312"/>
+</kw>
+<kw name="Finalizar checkout" owner="checkout">
+<kw name="Gerar Email Aleatorio" owner="customKeywords">
+<kw name="Evaluate JavaScript" owner="Browser">
+<msg time="2025-02-14T09:12:12.495480" level="INFO">JavaScript executed successfully.</msg>
+<msg time="2025-02-14T09:12:12.495480" level="INFO">${email} = user2894@test.com</msg>
+<var>${email}</var>
+<arg>css=body</arg>
+<arg>() =&gt; { return 'user' + Math.floor(Math.random() * 10000) + '@test.com'; }</arg>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Executes given javascript on the selected element(s) or on page.</doc>
+<status status="PASS" start="2025-02-14T09:12:12.439241" elapsed="0.056239"/>
+</kw>
+<return>
+<value>${email}</value>
+<status status="PASS" start="2025-02-14T09:12:12.495480" elapsed="0.000000"/>
+</return>
+<msg time="2025-02-14T09:12:12.495480" level="INFO">${email} = user2894@test.com</msg>
+<var>${email}</var>
+<status status="PASS" start="2025-02-14T09:12:12.439241" elapsed="0.056239"/>
+</kw>
+<kw name="Adicionar Item Ao carirnho" owner="checkout">
+<kw name="Mouse Move Relative To" owner="Browser">
+<msg time="2025-02-14T09:12:12.519496" level="INFO">Moving mouse relative to element center by x: 0.0, y: 0.0 coordinates.</msg>
+<arg>${home.topBar}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Moves the mouse cursor relative to the selected element.</doc>
+<status status="PASS" start="2025-02-14T09:12:12.495480" elapsed="0.032035"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-02-14T09:12:12.527515" level="INFO">Clicks the element '(//a[@title='Summer Dresses'])[2]'.</msg>
+<arg>${home.opcaoTopBar}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-02-14T09:12:12.527515" elapsed="0.785389"/>
+</kw>
+<kw name="Scroll To Element" owner="Browser">
+<arg>${pesquisa.resultados}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>This method waits for actionability checks, then tries to scroll element into view,
+unless it is completely visible.</doc>
+<status status="PASS" start="2025-02-14T09:12:13.312904" elapsed="0.885778"/>
+</kw>
+<kw name="Mouse Move Relative To" owner="Browser">
+<msg time="2025-02-14T09:12:14.206681" level="INFO">Moving mouse relative to element center by x: 0.0, y: 0.0 coordinates.</msg>
+<arg>${pesquisa.resultados}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Moves the mouse cursor relative to the selected element.</doc>
+<status status="PASS" start="2025-02-14T09:12:14.198682" elapsed="0.015998"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-02-14T09:12:14.222684" level="INFO">Clicks the element '(//div[@class='right-block']//a)[1]'.</msg>
+<arg>${pesquisa.clickResultado}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-02-14T09:12:14.222684" elapsed="0.588248"/>
+</kw>
+<kw name="Mouse Move Relative To" owner="Browser">
+<msg time="2025-02-14T09:12:15.649882" level="INFO">Moving mouse relative to element center by x: 0.0, y: 0.0 coordinates.</msg>
+<arg>${produto.cor}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Moves the mouse cursor relative to the selected element.</doc>
+<status status="PASS" start="2025-02-14T09:12:14.810932" elapsed="0.855210"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-02-14T09:12:15.666142" level="INFO">Clicks the element '(//a[@class='color_pick'])[1]'.</msg>
+<arg>${produto.cor}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-02-14T09:12:15.666142" elapsed="0.282388"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-02-14T09:12:15.956540" level="INFO">Clicks the element '//p[@id="add_to_cart"]/button[@name="Submit"]/span'.</msg>
+<arg>${produto.addCart}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-02-14T09:12:15.948530" elapsed="0.941954"/>
+</kw>
+<kw name="Wait And Click Element" owner="customKeywords">
+<kw name="Scroll To Element" owner="Browser">
+<arg>${locator}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>This method waits for actionability checks, then tries to scroll element into view,
+unless it is completely visible.</doc>
+<status status="PASS" start="2025-02-14T09:12:16.890484" elapsed="0.403950"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2025-02-14T09:12:17.302345" level="INFO">Waited for Element with selector //span[normalize-space(text())='Proceed to checkout'] at state visible</msg>
+<arg>${locator}</arg>
+<arg>visible</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2025-02-14T09:12:17.294434" elapsed="0.007911"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-02-14T09:12:17.302345" level="INFO">Clicks the element '//span[normalize-space(text())='Proceed to checkout']'.</msg>
+<arg>${locator}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-02-14T09:12:17.302345" elapsed="0.576698"/>
+</kw>
+<arg>${produto.irParaCheckout}</arg>
+<status status="PASS" start="2025-02-14T09:12:16.890484" elapsed="0.988559"/>
+</kw>
+<status status="PASS" start="2025-02-14T09:12:12.495480" elapsed="5.383563"/>
+</kw>
+<kw name="Realizar login com Sucesso" owner="login">
+<kw name="Wait And Click Element" owner="customKeywords">
+<kw name="Scroll To Element" owner="Browser">
+<arg>${locator}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>This method waits for actionability checks, then tries to scroll element into view,
+unless it is completely visible.</doc>
+<status status="PASS" start="2025-02-14T09:12:17.879043" elapsed="0.866252"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2025-02-14T09:12:18.753302" level="INFO">Waited for Element with selector //a[@title="Log in to your customer account" and contains(.,'Sign')] at state visible</msg>
+<arg>${locator}</arg>
+<arg>visible</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2025-02-14T09:12:18.745295" elapsed="0.008007"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-02-14T09:12:18.754823" level="INFO">Clicks the element '//a[@title="Log in to your customer account" and contains(.,'Sign')]'.</msg>
+<arg>${locator}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-02-14T09:12:18.753302" elapsed="0.776164"/>
+</kw>
+<arg>${home.sign}</arg>
+<status status="PASS" start="2025-02-14T09:12:17.879043" elapsed="1.650423"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2025-02-14T09:12:19.537480" level="INFO">Fills the text 'pablo@pablo.com.br' in the given field.</msg>
+<arg>${login.inputEmail}</arg>
+<arg>pablo@pablo.com.br</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2025-02-14T09:12:19.537480" elapsed="0.852820"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2025-02-14T09:12:20.390300" level="INFO">Fills the text '123Test@' in the given field.</msg>
+<arg>${login.inputPassword}</arg>
+<arg>123Test@</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2025-02-14T09:12:20.390300" elapsed="0.024481"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-02-14T09:12:20.414781" level="INFO">Clicks the element '//button[@id="SubmitLogin"]'.</msg>
+<arg>${login.signinButton}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-02-14T09:12:20.414781" elapsed="0.714371"/>
+</kw>
+<kw name="Wait Element Should Contain Text" owner="customKeywords">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2025-02-14T09:12:21.463697" level="INFO">Waited for Element with selector //h1[normalize-space(text())='My account'] at state visible</msg>
+<arg>${locator}</arg>
+<arg>visible</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2025-02-14T09:12:21.129152" elapsed="0.334545"/>
+</kw>
+<kw name="Get Text" owner="Browser">
+<msg time="2025-02-14T09:12:21.484573" level="INFO">Text: 'MY ACCOUNT'</msg>
+<arg>${locator}</arg>
+<arg>==</arg>
+<arg>${expectedText}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2025-02-14T09:12:21.463697" elapsed="0.020876"/>
+</kw>
+<arg>//h1[normalize-space(text())='My account']</arg>
+<arg>MY ACCOUNT</arg>
+<status status="PASS" start="2025-02-14T09:12:21.129152" elapsed="0.355421"/>
+</kw>
+<status status="PASS" start="2025-02-14T09:12:17.879043" elapsed="3.605530"/>
+</kw>
+<kw name="Mouse Move Relative To" owner="Browser">
+<msg time="2025-02-14T09:12:21.492580" level="INFO">Moving mouse relative to element center by x: 0.0, y: 0.0 coordinates.</msg>
+<arg>${carrinho.cart}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Moves the mouse cursor relative to the selected element.</doc>
+<status status="PASS" start="2025-02-14T09:12:21.484573" elapsed="0.016028"/>
+</kw>
+<kw name="Wait And Click Element" owner="customKeywords">
+<kw name="Scroll To Element" owner="Browser">
+<arg>${locator}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>This method waits for actionability checks, then tries to scroll element into view,
+unless it is completely visible.</doc>
+<status status="PASS" start="2025-02-14T09:12:21.500601" elapsed="0.040014"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2025-02-14T09:12:21.549659" level="INFO">Waited for Element with selector //span[normalize-space(text())='Check out'] at state visible</msg>
+<arg>${locator}</arg>
+<arg>visible</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2025-02-14T09:12:21.540615" elapsed="0.009044"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-02-14T09:12:21.549659" level="INFO">Clicks the element '//span[normalize-space(text())='Check out']'.</msg>
+<arg>${locator}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-02-14T09:12:21.549659" elapsed="1.470871"/>
+</kw>
+<arg>${carrinho.checkout}</arg>
+<status status="PASS" start="2025-02-14T09:12:21.500601" elapsed="1.519929"/>
+</kw>
+<kw name="Wait And Click Element" owner="customKeywords">
+<kw name="Scroll To Element" owner="Browser">
+<arg>${locator}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>This method waits for actionability checks, then tries to scroll element into view,
+unless it is completely visible.</doc>
+<status status="PASS" start="2025-02-14T09:12:23.020530" elapsed="0.072441"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2025-02-14T09:12:23.092971" level="INFO">Waited for Element with selector //span[text()='Proceed to checkout'] at state visible</msg>
+<arg>${locator}</arg>
+<arg>visible</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2025-02-14T09:12:23.092971" elapsed="0.000000"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-02-14T09:12:23.092971" level="INFO">Clicks the element '//span[text()='Proceed to checkout']'.</msg>
+<arg>${locator}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-02-14T09:12:23.092971" elapsed="0.540998"/>
+</kw>
+<arg>${carrinho.CarrinhoParaCheckout}</arg>
+<status status="PASS" start="2025-02-14T09:12:23.020530" elapsed="0.613439"/>
+</kw>
+<kw name="Wait And Click Element" owner="customKeywords">
+<kw name="Scroll To Element" owner="Browser">
+<arg>${locator}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>This method waits for actionability checks, then tries to scroll element into view,
+unless it is completely visible.</doc>
+<status status="PASS" start="2025-02-14T09:12:23.633969" elapsed="0.353247"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2025-02-14T09:12:23.995221" level="INFO">Waited for Element with selector //span[text()='Proceed to checkout'] at state visible</msg>
+<arg>${locator}</arg>
+<arg>visible</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2025-02-14T09:12:23.987216" elapsed="0.008005"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-02-14T09:12:23.995221" level="INFO">Clicks the element '//span[text()='Proceed to checkout']'.</msg>
+<arg>${locator}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-02-14T09:12:23.995221" elapsed="0.466692"/>
+</kw>
+<arg>${carrinho.CarrinhoParaCheckout}</arg>
+<status status="PASS" start="2025-02-14T09:12:23.633969" elapsed="0.827944"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-02-14T09:12:24.461913" level="INFO">Clicks the element '//input[@id="cgv"]'.</msg>
+<arg>${entrega.termos}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-02-14T09:12:24.461913" elapsed="0.383263"/>
+</kw>
+<kw name="Wait And Click Element" owner="customKeywords">
+<kw name="Scroll To Element" owner="Browser">
+<arg>${locator}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>This method waits for actionability checks, then tries to scroll element into view,
+unless it is completely visible.</doc>
+<status status="PASS" start="2025-02-14T09:12:24.845176" elapsed="0.032074"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2025-02-14T09:12:24.877250" level="INFO">Waited for Element with selector //button[contains(.,'Proceed to checkout')] at state visible</msg>
+<arg>${locator}</arg>
+<arg>visible</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2025-02-14T09:12:24.877250" elapsed="0.000000"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-02-14T09:12:24.877250" level="INFO">Clicks the element '//button[contains(.,'Proceed to checkout')]'.</msg>
+<arg>${locator}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-02-14T09:12:24.877250" elapsed="0.515141"/>
+</kw>
+<arg>${entrega.confirm}</arg>
+<status status="PASS" start="2025-02-14T09:12:24.845176" elapsed="0.547215"/>
+</kw>
+<kw name="Wait And Click Element" owner="customKeywords">
+<kw name="Scroll To Element" owner="Browser">
+<arg>${locator}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>This method waits for actionability checks, then tries to scroll element into view,
+unless it is completely visible.</doc>
+<status status="PASS" start="2025-02-14T09:12:25.392391" elapsed="0.097043"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2025-02-14T09:12:25.497433" level="INFO">Waited for Element with selector //a[@title='Pay by bank wire'] at state visible</msg>
+<arg>${locator}</arg>
+<arg>visible</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2025-02-14T09:12:25.489434" elapsed="0.007999"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-02-14T09:12:25.497433" level="INFO">Clicks the element '//a[@title='Pay by bank wire']'.</msg>
+<arg>${locator}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-02-14T09:12:25.497433" elapsed="0.442525"/>
+</kw>
+<arg>${pagamento.metodo}</arg>
+<status status="PASS" start="2025-02-14T09:12:25.392391" elapsed="0.547567"/>
+</kw>
+<kw name="Wait And Click Element" owner="customKeywords">
+<kw name="Scroll To Element" owner="Browser">
+<arg>${locator}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>This method waits for actionability checks, then tries to scroll element into view,
+unless it is completely visible.</doc>
+<status status="PASS" start="2025-02-14T09:12:25.948056" elapsed="0.075792"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2025-02-14T09:12:26.028901" level="INFO">Waited for Element with selector //button[contains(.,'I confirm my order')] at state visible</msg>
+<arg>${locator}</arg>
+<arg>visible</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2025-02-14T09:12:26.023848" elapsed="0.005053"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-02-14T09:12:26.028901" level="INFO">Clicks the element '//button[contains(.,'I confirm my order')]'.</msg>
+<arg>${locator}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-02-14T09:12:26.028901" elapsed="4.158252"/>
+</kw>
+<arg>${pagamento.confirmado}</arg>
+<status status="PASS" start="2025-02-14T09:12:25.939958" elapsed="4.247195"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-02-14T09:12:35.187671" level="INFO">Slept 5 seconds.</msg>
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-02-14T09:12:30.187153" elapsed="5.000518"/>
+</kw>
+<kw name="Wait Element Should Contain Text" owner="customKeywords">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2025-02-14T09:12:35.198754" level="INFO">Waited for Element with selector //p[@class='alert alert-success'] at state visible</msg>
+<arg>${locator}</arg>
+<arg>visible</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2025-02-14T09:12:35.187671" elapsed="0.011083"/>
+</kw>
+<kw name="Get Text" owner="Browser">
+<msg time="2025-02-14T09:12:35.214268" level="INFO">Text: 'Your order on My Shop is complete.'</msg>
+<arg>${locator}</arg>
+<arg>==</arg>
+<arg>${expectedText}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2025-02-14T09:12:35.198754" elapsed="0.015514"/>
+</kw>
+<arg>//p[@class='alert alert-success']</arg>
+<arg>Your order on My Shop is complete.</arg>
+<status status="PASS" start="2025-02-14T09:12:35.187671" elapsed="0.034626"/>
+</kw>
+<status status="PASS" start="2025-02-14T09:12:12.439241" elapsed="22.783056"/>
+</kw>
+<status status="PASS" start="2025-02-14T09:12:07.454918" elapsed="27.767379"/>
+</test>
+<test id="s1-s2-s1-s1-t7" name="Cenario: Ordenação de itens" line="28">
+<kw name="Abrir Browser" owner="openBrowser" type="SETUP">
+<kw name="Open Browser" owner="Browser">
+<msg time="2025-02-14T09:12:35.278558" level="WARN">Open Browser is for quick experimentation and debugging only. Use New Page for production.</msg>
+<msg time="2025-02-14T09:12:35.286570" level="INFO">Switching browser to browser=bcdf684e-eb8a-407b-badc-d401981da7c4</msg>
+<msg time="2025-02-14T09:12:35.286570" level="INFO">Successfully changed active browser: browser=bcdf684e-eb8a-407b-badc-d401981da7c4</msg>
+<msg time="2025-02-14T09:12:35.286570" level="INFO">Reusing existing browser with id: browser=bcdf684e-eb8a-407b-badc-d401981da7c4</msg>
+<msg time="2025-02-14T09:12:35.286570" level="INFO">{
+  "acceptDownloads": true,
+  "bypassCSP": true,
+  "forcedColors": "none",
+  "ignoreHTTPSErrors": false,
+  "javaScriptEnabled": true,
+  "offline": false,
+  "reducedMotion": "no-preference",
+  "serviceWorkers": "allow",
+  "viewport": {
+    "height": 720,
+    "width": 1280
+  }
+}</msg>
+<msg time="2025-02-14T09:12:35.308313" level="INFO">Successfully created context. </msg>
+<msg time="2025-02-14T09:12:35.308313" level="INFO">{'acceptDownloads': True, 'bypassCSP': True, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'height': 720, 'width': 1280}}</msg>
+<msg time="2025-02-14T09:12:39.890436" level="INFO">Successfully initialized new page object and opened url: http://www.automationpractice.pl/index.php</msg>
+<arg>url=http://www.automationpractice.pl/index.php</arg>
+<arg>browser=chromium</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Opens a new browser instance. Use this keyword for quick experiments or debugging sessions.</doc>
+<status status="PASS" start="2025-02-14T09:12:35.278558" elapsed="4.611878"/>
+</kw>
+<status status="PASS" start="2025-02-14T09:12:35.278558" elapsed="4.611878"/>
+</kw>
+<kw name="Realizar ordenacao de itens" owner="ordenacao">
+<kw name="Mouse Move Relative To" owner="Browser">
+<msg time="2025-02-14T09:12:39.938434" level="INFO">Moving mouse relative to element center by x: 0.0, y: 0.0 coordinates.</msg>
+<arg>${home.topBar}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Moves the mouse cursor relative to the selected element.</doc>
+<status status="PASS" start="2025-02-14T09:12:39.890436" elapsed="0.056034"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-02-14T09:12:39.946470" level="INFO">Clicks the element '(//a[@title='Summer Dresses'])[2]'.</msg>
+<arg>${home.opcaoTopBar}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-02-14T09:12:39.946470" elapsed="0.789544"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-02-14T09:12:45.736606" level="INFO">Slept 5 seconds.</msg>
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-02-14T09:12:40.736014" elapsed="5.000592"/>
+</kw>
+<kw name="Select Options By" owner="Browser">
+<msg time="2025-02-14T09:12:45.736606" level="INFO">Selects the option(s) Price: Lowest first by attribute SelectAttribute.label from element css=#selectProductSort.</msg>
+<arg>css=#selectProductSort</arg>
+<arg>label</arg>
+<arg>Price: Lowest first</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Selects options from select element found by ``selector``.</doc>
+<status status="PASS" start="2025-02-14T09:12:45.736606" elapsed="0.596267"/>
+</kw>
+<kw name="Validar Ordenação Por Preço Crescente" owner="ordenacao">
+<kw name="Get Text" owner="Browser">
+<msg time="2025-02-14T09:12:46.348890" level="INFO">Text: '\n\t\t\t\t\t\t\t\t\t\t$16\t\t\t\t\t\t\t\t\t'</msg>
+<msg time="2025-02-14T09:12:46.348890" level="INFO">${prices} = 
+										$16									</msg>
+<var>${prices}</var>
+<arg>.product_list .price.product-price</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2025-02-14T09:12:46.332873" elapsed="0.016017"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-02-14T09:12:46.348890" level="INFO">Prices extracted: 
+										$16									</msg>
+<arg>Prices extracted: ${prices}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-02-14T09:12:46.348890" elapsed="0.000000"/>
+</kw>
+<kw name="Create List" owner="BuiltIn">
+<msg time="2025-02-14T09:12:46.356879" level="INFO">${prices_clean} = []</msg>
+<var>${prices_clean}</var>
+<doc>Returns a list containing given items.</doc>
+<status status="PASS" start="2025-02-14T09:12:46.348890" elapsed="0.007989"/>
+</kw>
+<for flavor="IN">
+<iter>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-02-14T09:12:46.356879" level="INFO">${cleaned_price} = 16</msg>
+<var>${cleaned_price}</var>
+<arg>${price.strip().strip('$')}</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-02-14T09:12:46.356879" elapsed="0.000000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-02-14T09:12:46.356879" level="INFO">Cleaned price: 16</msg>
+<arg>Cleaned price: ${cleaned_price}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-02-14T09:12:46.356879" elapsed="0.000000"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-02-14T09:12:46.358370" level="INFO">${price_number} = 16.0</msg>
+<var>${price_number}</var>
+<arg>float(${cleaned_price})</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-02-14T09:12:46.358370" elapsed="0.000000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-02-14T09:12:46.358876" level="INFO">Converted price: 16.0</msg>
+<arg>Converted price: ${price_number}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-02-14T09:12:46.358370" elapsed="0.000567"/>
+</kw>
+<kw name="Append To List" owner="Collections">
+<arg>${prices_clean}</arg>
+<arg>${price_number}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2025-02-14T09:12:46.358937" elapsed="0.000000"/>
+</kw>
+<var name="${price}">
+										$16									</var>
+<status status="PASS" start="2025-02-14T09:12:46.356879" elapsed="0.002058"/>
+</iter>
+<var>${price}</var>
+<value>${prices}</value>
+<status status="PASS" start="2025-02-14T09:12:46.356879" elapsed="0.002058"/>
+</for>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-02-14T09:12:46.359441" level="INFO">${sorted_prices} = [16.0]</msg>
+<var>${sorted_prices}</var>
+<arg>sorted(${prices_clean})</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-02-14T09:12:46.358937" elapsed="0.000504"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-02-14T09:12:46.359441" level="INFO">Sorted prices: [16.0]</msg>
+<arg>Sorted prices: ${sorted_prices}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-02-14T09:12:46.359441" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${prices_clean}</arg>
+<arg>${sorted_prices}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2025-02-14T09:12:46.359441" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2025-02-14T09:12:46.332873" elapsed="0.026568"/>
+</kw>
+<status status="PASS" start="2025-02-14T09:12:39.890436" elapsed="6.469005"/>
+</kw>
+<status status="PASS" start="2025-02-14T09:12:35.278558" elapsed="11.080883"/>
+</test>
+<doc>Suite para cadastro de conta</doc>
+<status status="PASS" start="2025-02-14T09:11:11.162122" elapsed="95.266959"/>
+</suite>
+<status status="PASS" start="2025-02-14T09:11:11.157530" elapsed="95.271551"/>
+</suite>
+<status status="PASS" start="2025-02-14T09:11:11.149512" elapsed="95.279569"/>
+</suite>
+<status status="PASS" start="2025-02-14T09:09:30.196065" elapsed="196.241025"/>
+</suite>
+<statistics>
+<total>
+<stat pass="14" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="14" fail="0" skip="0" id="s1" name="Test &amp; ECommerce">Test &amp; ECommerce</stat>
+<stat pass="7" fail="0" skip="0" id="s1-s1" name="Test">Test &amp; ECommerce.Test</stat>
+<stat pass="7" fail="0" skip="0" id="s1-s1-s1" name="testesEcommecer">Test &amp; ECommerce.Test.testesEcommecer</stat>
+<stat pass="7" fail="0" skip="0" id="s1-s2" name="ECommerce">Test &amp; ECommerce.ECommerce</stat>
+<stat pass="7" fail="0" skip="0" id="s1-s2-s1" name="Test">Test &amp; ECommerce.ECommerce.Test</stat>
+<stat pass="7" fail="0" skip="0" id="s1-s2-s1-s1" name="testesEcommecer">Test &amp; ECommerce.ECommerce.Test.testesEcommecer</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2025-02-14T09:09:31.629947" level="WARN">Open Browser is for quick experimentation and debugging only. Use New Page for production.</msg>
+<msg time="2025-02-14T09:09:40.495785" level="WARN">Open Browser is for quick experimentation and debugging only. Use New Page for production.</msg>
+<msg time="2025-02-14T09:09:48.915834" level="WARN">Open Browser is for quick experimentation and debugging only. Use New Page for production.</msg>
+<msg time="2025-02-14T09:10:02.982558" level="WARN">Open Browser is for quick experimentation and debugging only. Use New Page for production.</msg>
+<msg time="2025-02-14T09:10:15.893054" level="WARN">Open Browser is for quick experimentation and debugging only. Use New Page for production.</msg>
+<msg time="2025-02-14T09:10:30.378019" level="WARN">Open Browser is for quick experimentation and debugging only. Use New Page for production.</msg>
+<msg time="2025-02-14T09:10:57.546569" level="WARN">Open Browser is for quick experimentation and debugging only. Use New Page for production.</msg>
+<msg time="2025-02-14T09:11:11.181655" level="WARN">Open Browser is for quick experimentation and debugging only. Use New Page for production.</msg>
+<msg time="2025-02-14T09:11:20.159142" level="WARN">Open Browser is for quick experimentation and debugging only. Use New Page for production.</msg>
+<msg time="2025-02-14T09:11:26.730938" level="WARN">Open Browser is for quick experimentation and debugging only. Use New Page for production.</msg>
+<msg time="2025-02-14T09:11:39.712324" level="WARN">Open Browser is for quick experimentation and debugging only. Use New Page for production.</msg>
+<msg time="2025-02-14T09:11:52.032895" level="WARN">Open Browser is for quick experimentation and debugging only. Use New Page for production.</msg>
+<msg time="2025-02-14T09:12:07.458929" level="WARN">Open Browser is for quick experimentation and debugging only. Use New Page for production.</msg>
+<msg time="2025-02-14T09:12:35.278558" level="WARN">Open Browser is for quick experimentation and debugging only. Use New Page for production.</msg>
+</errors>
+</robot>

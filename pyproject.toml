@@ -1,6 +1,9 @@
 [tool.poetry]
+<<<<<<< HEAD
 package-mode = false
 
+=======
+>>>>>>> 50b771605cb5795d774bc8d6a2d3eab6a69a5949
 name = "ecommerce"
 version = "0.1.0"
 description = "Projeto de automação de testes"
