@@ -1,5 +1,6 @@
 [tool.poetry]
 package-mode = false
+
 name = "ecommerce"
 version = "0.1.0"
 description = "Projeto de automação de testes"
