@@ -22,8 +22,3 @@ Resource    resource/pages/ordenacao.resource
 ### Utils
 Resource    resource/utils/openBrowser.resource
 Resource    resource/utils/customKeywords.resource
-
-
-*** Variables ***
-${EMAIL}    pablo@pablo.com.br
-${SENHA}    123Test@
