@@ -1,0 +1,2 @@
+confirm:
+  endereco: //span[text()='Proceed to checkout']

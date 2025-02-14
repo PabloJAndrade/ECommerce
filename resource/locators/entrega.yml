@@ -1,0 +1,3 @@
+entrega:
+  confirm: //button[contains(.,'Proceed to checkout')]
+  termos: //input[@id="cgv"]

@@ -1,0 +1,6 @@
+carrinho:
+  remover: //td[@data-title='Delete']
+  alert: //p[@class='alert alert-warning']
+  cart: (//div[@class='shopping_cart']//a)[1]
+  checkout: //span[normalize-space(text())='Check out']
+  CarrinhoParaCheckout: //span[text()='Proceed to checkout']

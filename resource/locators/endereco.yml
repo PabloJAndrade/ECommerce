@@ -1,0 +1,10 @@
+formulario:
+  endereco: //input[@id="address1"]
+  cidade: //input[@id="city"]
+  estado: //select[@id="id_state"]
+  cep: //input[@id="postcode"]
+  fone: //input[@id="phone"]
+  cel: //input[@id="phone_mobile"]
+  referencia: //input[@id="alias"]
+  salvar: //button[@id="submitAddress"]
+  

@@ -1,0 +1,5 @@
+pagamento:
+  metodo: //a[@title='Pay by bank wire']
+  item: //a[normalize-space(text())='Printed Summer Dress']
+  confirmado: //button[contains(.,'I confirm my order')]
+  confirmacao: //p[normalize-space(text())='Your order on My Shop is complete.']

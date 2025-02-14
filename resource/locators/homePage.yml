@@ -1,0 +1,7 @@
+home:
+  sign: //a[@title="Log in to your customer account" and contains(.,'Sign')]
+  pesquisa: //input[@id="search_query_top"]
+  pesquisar: //button[@name="submit_search"]
+  goToHome: //a[@title='Return to Home']
+  topBar: (//a[@title='Dresses'])[2]
+  opcaoTopBar: (//a[@title='Summer Dresses'])[2]

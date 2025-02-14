@@ -1,0 +1,20 @@
+signin:
+  inputEmail: //input[@id="email_create"]
+  submitEmail: //button[@id="SubmitCreate"]
+
+login: 
+  inputEmail: //input[@id="email"]
+  inputPassword: //input[@id="passwd"]
+  signinButton: //button[@id="SubmitLogin"]
+
+cadastrarConta:
+  titulo: //input[@id="id_gender1"]
+  primeiroNome: //input[@id="customer_firstname"]
+  ultimoNome: //input[@id="customer_lastname"]
+  senha: //input[@id="passwd"]
+  registrar: //span[normalize-space(text())='Register']
+
+dataAniversario:
+  dia: (//select[@id="days"]//option)[2]
+  mes: //option[contains(.,'January')]
+  ano: //option[contains(.,'1995')]

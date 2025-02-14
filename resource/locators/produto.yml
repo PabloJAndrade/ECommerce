@@ -1,0 +1,11 @@
+pesquisa:
+  resultados: (//ul[contains(@class,'product_list grid')]//li)[1]
+  clickResultado: (//div[@class='right-block']//a)[1]
+
+produto:
+ cor:  (//a[@class='color_pick'])[1]
+ addCart: //p[@id="add_to_cart"]/button[@name="Submit"]/span
+ irParaCheckout: //span[normalize-space(text())='Proceed to checkout']
+
+checkout:
+  checkout: //span[text()='Proceed to checkout']
