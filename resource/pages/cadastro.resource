@@ -11,5 +11,5 @@ Criar Conta
     Wait And Click Element    ${cadastrarConta.titulo}
     Fill Text    ${cadastrarConta.primeiroNome}    Pablo
     Fill Text    ${cadastrarConta.ultimoNome}    Craveiro
-    Fill Text    ${cadastrarConta.senha}    ${SENHA}
+    Fill Text    ${cadastrarConta.senha}    123Test@
     Wait And Click Element    ${cadastrarConta.registrar}
