@@ -1,0 +1,43 @@
+name: Smoke Test
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    types:
+      - opened
+      - synchronize
+      - reopened
+  schedule:
+    - cron: '0 3 * * *'
+    - cron: '0 12 * * *'
+    - cron: '0 18 * * *'
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 📥 Checkout do código
+        uses: actions/checkout@v4
+
+      - name: 🐍 Instalar Python e Poetry
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: 🛠️ Instalar dependências com Poetry
+        run: |
+          pip install poetry
+          poetry install
+
+      - name: 🚀 Executar testes com Robot Framework
+        run: |
+          poetry run robot -d results tests/
+
+      - name: 📂 Upload de resultados
+        uses: actions/upload-artifact@v4
+        with:
+          name: resultados-dos-testes
+          path: results/
