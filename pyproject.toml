@@ -1,15 +1,14 @@
-[project]
+[tool.poetry]
+package-mode = false
 name = "ecommerce"
 version = "0.1.0"
-description = ""
-authors = [
-    {name = "PabloJAndrade",email = "pcraveirodeandrade@gmail.com"}
-]
+description = "Projeto de automação de testes"
+authors = ["PabloJAndrade <pcraveirodeandrade@gmail.com>"]
 readme = "README.md"
-requires-python = ">=3.12"
-dependencies = [
-]
+packages = [{ include = "resource" }, { include = "test" }]
 
+[tool.poetry.dependencies]
+python = ">=3.12"
 
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
