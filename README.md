@@ -1,17 +1,49 @@
 
 # Nome do Projeto
 My Shop - Robot Automation
-## Requisitos
+## Instalação e Execução
+
+Siga as instruções abaixo para configurar o ambiente, instalar as dependências necessárias e executar os testes do projeto.
 - Python 3.8 ou superior
 - Poetry (gerenciador de dependências)
-- Ferramenta para executar testes (Robot Framework ou Pytest)
+- Ferramenta para executar testes (Robot Framework)
+## Configuração do Ambiente
+1. Crie um ambiente virtual:
+```bash
+python3 -m venv robot_env
+```
 
+2. Ative o ambiente virtual:
+- No Unix/Mac:
+    ```bash
+    source robot_env/bin/activate
+    ```
+- No Windows:
+    ```bash
+    .\robot_env\Scripts\activate
+    ```
+
+3. Instale as dependências necessárias:
+```bash
+pip install robotframework pyyaml robotframework-browser
+rfbrowser init
+```
+
+## Execução dos Testes
+Após configurar o ambiente, você pode executar os testes usando o Robot Framework:
+
+```bash
+robot test/
+```
+Caso ocorra algum erro relacionado ao módulo `Browser`, certifique-se de que todas as dependências estão corretamente instaladas.
+
+## Requisitos
 ## Configuração do Ambiente
 1. Clone este repositório:
    git clone https://github.com/seu-usuario/nome-do-repositorio.git
    cd nome-do-repositorio
 
-2. Instale o Poetry, caso não tenha:
+Caso não tenha o Poetry instalado, você pode pular esta etapa.
    - Para sistemas baseados no Unix (Linux/Mac):
      curl -sSL https://install.python-poetry.org | python3 -
 
@@ -24,6 +56,8 @@ My Shop - Robot Automation
 
    - Com pytest:
      poetry run pytest
+   - Com Robot:
+      robot test .
 
 ## Observações
 - A estrutura do projeto está organizada de forma a facilitar a execução dos testes.
